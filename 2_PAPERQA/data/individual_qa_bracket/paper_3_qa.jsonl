@@ -1,0 +1,40 @@
+{"question": "[Paper ID: 3] What are generative models for continuous domains used for?", "answer": "They are used for applications in images, videos, and audio."}
+{"question": "[Paper ID: 3] What is a core challenge in generative models for continuous domains?", "answer": "Achieving high-fidelity outputs, efficient inference, and stable training."}
+{"question": "[Paper ID: 3] What is the trilemma mentioned in the text?", "answer": "The trilemma is achieving high-fidelity outputs, efficient inference, and stable training simultaneously."}
+{"question": "[Paper ID: 3] Which models are one of the leading techniques in generative modeling?", "answer": "Diffusion models."}
+{"question": "[Paper ID: 3] What is required for high-quality results in diffusion models?", "answer": "Many inference steps are required."}
+{"question": "[Paper ID: 3] What are step-reduction methods in the context of diffusion models?", "answer": "Techniques such as diffusion distillation and Consistency Models that reduce the number of inference steps."}
+{"question": "[Paper ID: 3] What risk do step-reduction methods often have?", "answer": "They risk training collapse without careful tuning and regularization."}
+{"question": "[Paper ID: 3] What regularization strategies are mentioned for training step-reduction methods?", "answer": "Pre-generating data-noise pairs and early stopping."}
+{"question": "[Paper ID: 3] What new approach is introduced to address the trilemma?", "answer": "Inductive Moment Matching (IMM)."}
+{"question": "[Paper ID: 3] What is the main advantage of IMM?", "answer": "It provides stable, single-stage training for generative models from scratch for single- or multi-step inference."}
+{"question": "[Paper ID: 3] On what does IMM operate?", "answer": "IMM operates on the time-dependent marginal distributions of stochastic interpolants."}
+{"question": "[Paper ID: 3] What do stochastic interpolants connect?", "answer": "They connect two arbitrary probability density functions, such as data at t=0 and prior at t=1."}
+{"question": "[Paper ID: 3] What mapping does IMM learn?", "answer": "A mapping from any marginal at time t=1 to any marginal at time s<t."}
+{"question": "[Paper ID: 3] What generation modes does IMM support?", "answer": "IMM naturally supports one- or multi-step generation."}
+{"question": "[Paper ID: 3] How is IMM trained efficiently?", "answer": "By using mathematical induction."}
+{"question": "[Paper ID: 3] What is formed at time s for IMM training?", "answer": "Two distributions are formed at s by running a one-step IMM from samples at r and t."}
+{"question": "[Paper ID: 3] What is minimized during IMM training?", "answer": "The divergence between the two distributions at s."}
+{"question": "[Paper ID: 3] What does minimizing divergence at s enforce?", "answer": "It enforces that the distributions at s are close to those at r."}
+{"question": "[Paper ID: 3] What does the inductive construction of IMM guarantee?", "answer": "It guarantees convergence to the data distribution."}
+{"question": "[Paper ID: 3] How is IMM modeled for training stability?", "answer": "Based on certain stochastic interpolants."}
+{"question": "[Paper ID: 3] What objective is optimized for IMM stability?", "answer": "Stable sample-based divergence estimators such as moment matching."}
+{"question": "[Paper ID: 3] Who introduced moment matching as a stable sample-based divergence estimator?", "answer": "Gretton et al., 2012."}
+{"question": "[Paper ID: 3] What is a notable theoretical result about Consistency Models (CMs)?", "answer": "CMs are a single-particle, first-moment matching special case of IMM."}
+{"question": "[Paper ID: 3] What does the special case relation of CMs to IMM explain?", "answer": "It partially explains the training instability of Consistency Models."}
+{"question": "[Paper ID: 3] What performance does IMM achieve on ImageNet-256x256?", "answer": "IMM achieves 1.99 FID with only 8 inference steps."}
+{"question": "[Paper ID: 3] What architecture is used for IMM on ImageNet-256x256?", "answer": "Standard transformer architectures."}
+{"question": "[Paper ID: 3] What performance does IMM achieve on CIFAR-10?", "answer": "IMM achieves state-of-the-art 1.98 FID with 2-step generation."}
+{"question": "[Paper ID: 3] How is the model for CIFAR-10 trained?", "answer": "It is trained from scratch."}
+{"question": "[Paper ID: 3] What are examples of applications enabled by generative models in continuous domains?", "answer": "Applications in images, videos, and audio."}
+{"question": "[Paper ID: 3] Which works are cited for generative models in images?", "answer": "Rombach et al., 2022; Saharia et al., 2022; Esser et al., 2024."}
+{"question": "[Paper ID: 3] Which works are cited for generative models in videos?", "answer": "Ho et al., 2022a; Blattmann et al., 2023; OpenAI, 2024."}
+{"question": "[Paper ID: 3] Which works are cited for generative models in audio?", "answer": "Chen et al., 2020; Kong et al., 2020; Liu et al., 2023."}
+{"question": "[Paper ID: 3] Which works are cited for diffusion models?", "answer": "Sohl-Dickstein et al., 2015; Ho et al., 2020; Song et al., 2020b."}
+{"question": "[Paper ID: 3] Which works are cited for diffusion distillation?", "answer": "Yin et al., 2024; Sauer et al., 2025; Zhou et al., 2024; Luo et al., 2024a."}
+{"question": "[Paper ID: 3] Which works are cited for Consistency Models?", "answer": "Song et al., 2023; Geng et al., 2024; Lu & Song, 2024; Kim et al., 2023."}
+{"question": "[Paper ID: 3] Which work is cited for stochastic interpolants?", "answer": "Albergo et al., 2023."}
+{"question": "[Paper ID: 3] What does Figure 2 illustrate?", "answer": "Figure 2 illustrates IMM's support for one- or multi-step generation."}
+{"question": "[Paper ID: 3] Why is training stability important for generative models?", "answer": "Because unstable training can lead to model collapse or poor performance."}
+{"question": "[Paper ID: 3] What is FID in the context of generative models?", "answer": "FID stands for Fréchet Inception Distance, a metric for evaluating image generation quality."}
+{"question": "[Paper ID: 3] How does IMM compare to diffusion models in terms of inference steps?", "answer": "IMM achieves better performance with fewer inference steps."}

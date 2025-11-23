@@ -1,0 +1,65 @@
+You are an expert academic assistant tasked with creating a high-quality question-answering dataset from a research paper's introduction. Your goal is to generate 30 question-and-answer pairs based exclusively on the provided text.
+
+Instructions and Rules:
+Source Grounding: All questions and answers MUST be derived solely from the provided introduction text. Do not use any external knowledge or make assumptions beyond what is written.
+
+Question Hierarchy: You must create questions across three distinct levels of understanding, as defined below.
+
+Quantity: Generate exactly 30 pairs in total: 10 for Level 1, 10 for Level 2, and 10 for Level 3.
+
+Output Format: The output must be a single, valid JSON array of objects. Do not include any explanatory text, comments, or markdown formatting before or after the JSON code block.
+
+Question Level Definitions:
+Level 1: Key Information Recall (10 Questions)
+
+Objective: To test the recall of specific, explicitly stated facts, proper nouns, terminology, and figures from the text.
+
+Question Type: "What is...?", "What are the names of...?", "Which X was mentioned...?"
+
+Level 2: Contextual Comprehension (10 Questions)
+
+Objective: To test the understanding of relationships between concepts, such as cause-and-effect, problem-solution, comparisons, and the function of a component.
+
+Question Type: "Why does...?", "What is the effect of A on B?", "How does X work?", "What is the difference between A and B?"
+
+Level 3: Logical Structure Inference (10 Questions)
+
+Objective: To test the understanding of the overall logical flow of the text, including identifying the core problem, the research gap, the proposed solution, and the main contribution.
+
+Question Type: "What is the core problem the authors aim to solve?", "What research gap does this paper intend to fill?", "What is the main advantage of the proposed method?", "Summarize the key contribution of this work in relation to prior limitations."
+
+Desired JSON Output Format:
+The final output MUST be a JSON array containing 30 objects. Each object must have three keys: level (integer: 1, 2, or 3), question (string), and answer (string).
+
+Example:
+
+[
+  {
+    "level": 1,
+    "question": "What is the full name of the algorithm the authors integrate their estimator into?",
+    "answer": "The authors integrated their estimator into the Generalized Successive Elimination algorithm."
+  },
+  {
+    "level": 2,
+    "question": "According to the text, what is the inverse relationship between response time and preference strength?",
+    "answer": "The text states that users who strongly prefer to skip a product tend to do so quickly, while longer response times can indicate weaker preferences."
+  },
+  {
+    "level": 3,
+    "question": "What is the core reason complex psychological models are impractical for real-time systems, and how does this paper's proposal address it?",
+    "answer": "They are impractical because they rely on computationally intensive methods like hierarchical Bayesian inference and MLE. This paper addresses it by proposing a computationally efficient method that frames utility estimation as a linear regression problem."
+  }
+]
+
+Introduction Text to Analyze:
+Title: The Value of Reward Lookahead in Reinforcement Learning
+
+Reinforcement Learning (RL, Sutton and Barto, 2018) is the problem of learning how to interact with a changing environment. The setting usually consists of two major elements: a transition kernel, which governs how the state of the environment evolves due to the actions of an agent, and a reward given to the agent for performing an action at a given environment state. Agents must decide which actions to perform in order to collect as much reward as possible, taking into account not only the immediate reward gain, but also the long-term effects of actions on the state dynamics.
+
+In the standard RL framework, reward information is usually observed after playing an action, and agents only aim to maximize their cumulative expected reward, also known as the value (Jaksch et al., 2010; Azar et al., 2017; Jin et al., 2018; Dann et al., 2019; Zanette and Brunskill, 2019; Efroni et al., 2019b; Simchowitz and Jamieson, 2019; Zhang et al., 2021b). Yet, in many real-world scenarios, partial information about the future reward is accessible in advance. For example, when performing transactions, prices are usually known. In navigation settings, rewards are sometimes associated with traffic, which can be accurately estimated for the near future. In goal-oriented problems (Schaul et al., 2015; Andrychowicz et al., 2017), the location of the goal is oftentimes revealed in advance. This information is completely ignored by agents that maximize the expected reward, even though using this future information on the reward should greatly increase the reward collected by the agent.
+
+As an illustration, consider a driving problem where an agent travels between two locations, aiming to collect as much reward as possible. In one such scenario, rewards are given only when traveling free roads. It would then be reasonable to assume that agents see whether there is traffic before deciding in which way to turn at every intersection (‘one-step lookahead’). In an alternative scenario, the agent participates in ride-sharing and gains a reward when picking up a passenger. In this case, agents gain information on nearby passengers along the path, not necessarily just in the closest intersection (‘multi-step lookahead’). Finally, the destination might be revealed only at the beginning of the interaction, and reward is only gained when reaching it (‘full lookahead’). In all examples, the additional information should be utilized by the agent to increase its collected reward.
+
+In this paper, we analyze the value of future (lookahead) information on the reward that could be obtained by the agent through the lens of competitive analysis. More precisely, we study the competitive ratio (CR) between the value of an agent that only has access to reward distributions and that of a lookahead agent who sees the actual reward realizations for several future timesteps before choosing each action. Our contributions are the following: (i) Given an environment and its expected rewards, we characterize the distribution that maximizes the value of lookahead agents, for all ranges of lookahead from one step to full lookahead; this distribution therefore minimizes the CR. In particular, we show that the lookahead value is maximized by long-shot rewards – very high rewards at extremely low probabilities. (ii) We derive the worst-case CR as a function of the dynamics of the environment (that is, for the worst-case reward expectations). Surprisingly, the CR that emerges is closely related to fundamental quantities in reward-free exploration and offline RL (Xie et al., 2022; Al-Marjani et al., 2023). (iii) We analyze the CR for the worst-possible environment. Specifically, tree-like environments that require deciding both when and where to navigate exhibit near-worst-case CR. (iv) Lastly, we complement these results by presenting different environments and their CR, providing more intuition to our results.
+
+Now, generate the 30 Q&A pairs in the specified JSON format based on the text provided above.

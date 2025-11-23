@@ -1,0 +1,617 @@
+[
+  {
+    "question": "How does the informational advantage of physicians over algorithms manifest in emergency room triage?",
+    "answer": "Physicians have access to additional modalities, including direct patient examination, which algorithms may lack, allowing them to capture relevant context beyond structured data.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "Why are the observations that algorithms outperform humans and that humans have richer information sets not contradictory?",
+    "answer": "Because algorithms may be more accurate using available data, but humans can access information the algorithm cannot, making both observations true simultaneously.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does human-AI complementarity mean in the context of prediction tasks?",
+    "answer": "It refers to a joint system where human and algorithmic input together outperform either working alone.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "Why is the ability of a physician to distinguish between patients with identical imaging data significant?",
+    "answer": "It indicates that the physician has access to information not captured by the imaging data, suggesting value in human input even when algorithms are accurate.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What statistical test is suggested for evaluating whether physicians possess information beyond imaging data?",
+    "answer": "Testing if physicians perform better than random in distinguishing patients with identical imaging data.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "Why is finding identical observations in continuous or high-dimensional data unlikely?",
+    "answer": "Because such data, like X-rays, rarely yield perfectly identical observations due to their complexity and variability.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the proposed framework relax the requirement for identical observations?",
+    "answer": "By considering sufficiently similar observations or coarser subsets where no algorithm has significant predictive power.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is algorithmic indistinguishability as defined in this work?",
+    "answer": "It refers to subsets of inputs where no algorithm in a rich, user-defined class can significantly distinguish or predict outcomes.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How are algorithmically indistinguishable subsets discovered according to the paper?",
+    "answer": "Via a novel connection to multicalibration.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the main benefit of using human feedback within algorithmically indistinguishable subsets?",
+    "answer": "Human feedback can outperform any algorithmic predictor within these subsets.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "Why is the framework tractable and relevant from a decision-theoretic perspective?",
+    "answer": "Because it accounts for both informational constraints and situations where expert signal is hard for algorithms to learn due to limited data or computational limits.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework interpolate between informational and computational contexts?",
+    "answer": "By defining indistinguishability relative to whichever class of models is relevant for the prediction task.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the novel framework for human-AI collaboration introduced in the paper?",
+    "answer": "It uses human feedback to refine predictions within sets of inputs that are algorithmically indistinguishable.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the method in Section 4 decide when to incorporate human feedback?",
+    "answer": "It incorporates feedback only when it improves on the best feasible predictive model and quantifies this improvement.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What prior result does the method in Section 4 extend, and in what special case?",
+    "answer": "It extends the 'omnipredictors' result of [16] in the special case of squared error.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What do the experiments in Section 5 demonstrate regarding human and algorithmic predictors?",
+    "answer": "Humans fail to outperform algorithms on average but are more accurate in specific, algorithmically indistinguishable instances.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How are instances where humans outperform algorithms identified according to the paper?",
+    "answer": "These instances are identifiable ex ante.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What complementary setting is considered in Section 6?",
+    "answer": "An algorithm provides recommendations to many downstream users who independently choose when to comply.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What conditions are provided for predictor robustness in Section 6?",
+    "answer": "Conditions under which a predictor is robust to compliance patterns and simultaneously optimal for all downstream users.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "Why might an expert provide signal that is difficult for an algorithm to learn directly?",
+    "answer": "Due to limited training data or computational constraints faced by the algorithm.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the significance of multicalibration in the proposed approach?",
+    "answer": "It enables discovery of algorithmically indistinguishable subsets for targeted human feedback.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the limitations of algorithms with respect to global consistency and action spaces?",
+    "answer": "By allowing human input in contexts where algorithms are informationally constrained, thus overcoming these limitations.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "In the example of X-ray classification for atelectasis, what is the potential benefit of physician input?",
+    "answer": "Physicians may have access to information beyond the X-ray, potentially improving predictions.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework handle the practical relevance of different model classes?",
+    "answer": "Indistinguishability is defined with respect to the model class relevant to the specific prediction task.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the role of Section 4 in the paper's contributions?",
+    "answer": "It presents a method for incorporating human feedback only when it improves on the best algorithmic model.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "Why is the extension of the omnipredictors result in squared error potentially of independent interest?",
+    "answer": "Because it generalizes a known result to a new context, offering insights into prediction improvement.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the analysis by [9] reveal about human and algorithmic performance in emergency room triage?",
+    "answer": "It finds that algorithms often outperform humans, but humans have access to richer information.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework ensure that human feedback is only used when beneficial?",
+    "answer": "By quantifying the improvement over the best feasible predictive model before incorporating feedback.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the term 'algorithmically indistinguishable' imply about the predictive power of algorithms?",
+    "answer": "It implies that within certain subsets, no algorithm can significantly predict outcomes beyond chance.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework relate to decision theory?",
+    "answer": "It considers whether expert signal is hard for algorithms to learn, integrating informational and computational constraints.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the impact of limited training data on algorithmic prediction according to the text?",
+    "answer": "It can make it difficult for algorithms to learn expert signals directly, highlighting the value of human input.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework generalize the concept of similarity in input data?",
+    "answer": "By considering coarser subsets where inputs are 'similar enough' that algorithms cannot distinguish them.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the decision-theoretic relevance of the framework's approach to indistinguishability?",
+    "answer": "It addresses both fundamental informational constraints and practical learning challenges faced by algorithms.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address settings where humans fail to outperform algorithms on average?",
+    "answer": "By identifying specific instances where humans are more accurate and leveraging human input in those cases.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the significance of ex ante identification of instances where human input is superior?",
+    "answer": "It allows targeted collaboration, improving overall prediction without unnecessary human intervention.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework treat downstream users who may or may not comply with algorithmic recommendations?",
+    "answer": "It provides conditions for predictor robustness to varying compliance patterns among users.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "In what way does the framework refine predictions beyond what algorithms can achieve?",
+    "answer": "By incorporating human feedback in cases where algorithmic models cannot distinguish between inputs.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework balance tractability with predictive improvement?",
+    "answer": "It uses multicalibration to identify actionable subsets and quantifies improvement before applying human feedback.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework imply about the potential for human-AI collaboration in high-stakes prediction tasks?",
+    "answer": "That collaboration can yield superior results by leveraging human input where algorithms are limited.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "Why might a predictive algorithm outperform a physician yet still benefit from human input?",
+    "answer": "Because the physician may have access to context or modalities not available to the algorithm.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework account for the richness of human information sources?",
+    "answer": "By targeting human input in subsets where algorithms lack predictive power due to missing information.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What role does the notion of 'feasible predictive model' play in the framework?",
+    "answer": "It sets a benchmark for when human feedback is incorporated, ensuring only meaningful improvements.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework extend previous work on omnipredictors?",
+    "answer": "By applying the concept to the special case of squared error and integrating human feedback.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the practical implication of the framework for healthcare triage?",
+    "answer": "It suggests combining algorithmic predictions with physician input to optimize patient prioritization.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the challenge of continuous-valued, high-dimensional data?",
+    "answer": "By relaxing the requirement for identical observations and focusing on sufficiently similar inputs.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "Why is it important to quantify the improvement from human feedback?",
+    "answer": "To ensure that human input is only used when it meaningfully enhances prediction accuracy.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework suggest about the future of human-AI collaboration?",
+    "answer": "That structured collaboration can systematically outperform either humans or algorithms alone.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How is the concept of multicalibration leveraged in the proposed framework?",
+    "answer": "It is used to identify subsets of inputs where human feedback can improve predictions.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework imply about the limitations of current predictive algorithms?",
+    "answer": "That algorithms may be fundamentally limited by the data they access and may miss important context.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the issue of algorithmic bias due to limited data modalities?",
+    "answer": "By incorporating human input where algorithms lack access to relevant modalities.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the importance of 'user-defined class' of models in the framework?",
+    "answer": "It allows the framework to adapt indistinguishability to the practical constraints of any given prediction task.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework ensure optimality for all downstream users despite varying compliance?",
+    "answer": "By providing conditions under which the predictor remains robust to independent compliance choices.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the rationale for focusing on algorithmically indistinguishable subsets rather than the entire input space?",
+    "answer": "Because human input is most valuable where algorithms cannot distinguish between inputs, maximizing collaborative benefit.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework handle the trade-off between algorithmic accuracy and human expertise?",
+    "answer": "By selectively using human input only in cases where it demonstrably improves predictions.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework relate to the concept of 'second opinion' in clinical decision-making?",
+    "answer": "It formalizes the value of a physician's second opinion in cases where algorithms are informationally constrained.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework imply about the role of human judgment in the era of advanced machine learning?",
+    "answer": "Human judgment remains critical, especially in contexts where algorithms lack sufficient information.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the challenge of integrating heterogeneous information sources?",
+    "answer": "By allowing human feedback to supplement algorithmic predictions in cases of informational gaps.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "Why is the framework considered tractable?",
+    "answer": "Because it uses multicalibration to systematically identify actionable subsets for human input.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the significance of quantifying improvement in prediction when incorporating human feedback?",
+    "answer": "It ensures that collaboration is beneficial and avoids unnecessary reliance on human input.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework differ from traditional approaches to human-AI collaboration?",
+    "answer": "It targets collaboration only where algorithms are informationally limited, rather than uniformly combining inputs.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework suggest about the generalizability of human-AI collaboration strategies?",
+    "answer": "That strategies should be tailored to the informational and computational context of each prediction task.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the issue of over-reliance on algorithmic predictions?",
+    "answer": "By identifying cases where human input is necessary to improve prediction accuracy.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the role of statistical testing in evaluating the value of human input?",
+    "answer": "It is used to determine whether physicians perform better than random in distinguishing similar cases.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework handle the issue of computational constraints in learning expert signals?",
+    "answer": "By allowing human input in cases where algorithms cannot learn signals due to computational limitations.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework imply about the potential for identifying actionable subsets in prediction tasks?",
+    "answer": "That actionable subsets can be systematically discovered and leveraged for improved prediction.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework ensure that collaboration is efficient and targeted?",
+    "answer": "By incorporating human feedback only in algorithmically indistinguishable subsets where it adds value.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the impact of the framework on the design of joint human-AI systems?",
+    "answer": "It informs the design by specifying when and how to use human input for optimal performance.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework treat the variability in downstream user compliance?",
+    "answer": "By providing robustness conditions that ensure optimality regardless of compliance patterns.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the significance of the framework for high-stakes domains like healthcare?",
+    "answer": "It enables more accurate and context-aware predictions by combining algorithmic and human expertise.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the issue of missing modalities in algorithmic input data?",
+    "answer": "By leveraging human feedback where algorithms lack access to certain modalities.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the theoretical foundation for identifying algorithmically indistinguishable subsets?",
+    "answer": "A connection to multicalibration provides the foundation for systematic identification.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework relate to the broader literature on prediction and decision-making?",
+    "answer": "It integrates concepts from machine learning, decision theory, and human-AI collaboration.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework contribute to the understanding of when human input is valuable?",
+    "answer": "By specifying conditions under which human feedback improves predictions over algorithms.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the practical relevance of defining indistinguishability with respect to model classes?",
+    "answer": "It allows adaptation to the capabilities and limitations of available predictive models.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework improve upon average performance metrics in prediction tasks?",
+    "answer": "By focusing on specific instances where human input provides a measurable improvement.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework suggest about the limitations of relying solely on structured data?",
+    "answer": "That important context may be missed, necessitating human input in certain cases.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework ensure that the joint human-AI system is superior to either component alone?",
+    "answer": "By combining strengths and targeting collaboration where each is most effective.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the role of Section 5 in validating the framework's approach?",
+    "answer": "It presents experiments showing that humans outperform algorithms in specific, identifiable instances.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the challenge of prediction in high-dimensional data spaces?",
+    "answer": "By relaxing the requirement for identical inputs and focusing on similarity and indistinguishability.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework imply about the future of algorithmic triage in healthcare?",
+    "answer": "That combining algorithmic predictions with targeted human input can optimize triage decisions.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework quantify improvement from human feedback?",
+    "answer": "By comparing the accuracy of joint predictions to the best feasible algorithmic model.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the significance of 'downstream users' in the context of algorithmic recommendations?",
+    "answer": "They represent individuals who may choose when to comply, affecting overall system performance.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the issue of compliance in algorithmic recommendations?",
+    "answer": "By providing conditions for predictor robustness to varying compliance patterns.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework operationalize the concept of human-AI complementarity?",
+    "answer": "By specifying when and how human feedback should be integrated for optimal prediction.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework suggest about the role of statistical analysis in prediction improvement?",
+    "answer": "It is essential for identifying cases where human input is beneficial.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework relate to the concept of 'signal' in prediction tasks?",
+    "answer": "It recognizes that experts may provide signals that are hard for algorithms to learn, justifying human input.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the impact of the framework on algorithmic fairness and calibration?",
+    "answer": "It leverages multicalibration to ensure predictions are refined where necessary.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework handle cases where algorithmic predictors are already highly accurate?",
+    "answer": "It only incorporates human feedback in instances where it provides additional accuracy.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework imply about the distribution of cases where human input is valuable?",
+    "answer": "Such cases are identifiable and may be concentrated in algorithmically indistinguishable subsets.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework ensure that human input is not wasted on cases where algorithms are sufficient?",
+    "answer": "By targeting human feedback only to subsets where algorithms lack predictive power.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the theoretical justification for using human feedback in prediction tasks?",
+    "answer": "Humans may have access to information or modalities that algorithms cannot utilize.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the challenge of integrating human feedback into algorithmic systems?",
+    "answer": "By providing a tractable method for identifying where human input improves predictions.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework imply about the scalability of human-AI collaboration?",
+    "answer": "It enables scalable collaboration by focusing human input on high-impact subsets.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework relate to the concept of 'best available predictor'?",
+    "answer": "Human feedback is only used when it improves upon the best available algorithmic predictor.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the significance of 'compliance patterns' in the robustness of predictors?",
+    "answer": "Predictor robustness ensures optimality despite varying user compliance with recommendations.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework guide the allocation of human expertise in prediction tasks?",
+    "answer": "By identifying and targeting cases where human input is most beneficial.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework suggest about the interplay between data modalities and prediction accuracy?",
+    "answer": "Prediction accuracy can be limited by modality access, and human input can compensate for missing modalities.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the challenge of prediction in complex, high-stakes environments?",
+    "answer": "By leveraging human expertise where algorithmic models are limited by data or computation.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the role of ex ante identification in the framework's approach?",
+    "answer": "It enables proactive targeting of human input to cases where it will be most effective.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework ensure that prediction improvement is measurable and meaningful?",
+    "answer": "By quantifying the improvement over the best feasible algorithmic model before applying human feedback.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework imply about the optimal use of human and algorithmic resources?",
+    "answer": "Resources should be allocated where each provides the greatest marginal benefit.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework contribute to the design of robust predictive systems?",
+    "answer": "By specifying conditions for robustness to user compliance and integrating human input where necessary.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the practical impact of the framework on emergency room triage decisions?",
+    "answer": "It enables more accurate prioritization by combining algorithmic and human judgments.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the issue of prediction under informational constraints?",
+    "answer": "By leveraging human input in cases where algorithms cannot access all relevant information.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework suggest about the future research directions in human-AI collaboration?",
+    "answer": "Further exploration of targeted collaboration and integration of multicalibration techniques.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework reconcile the strengths of humans and algorithms in prediction tasks?",
+    "answer": "By combining them in a way that leverages each where they are most effective.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the significance of Section 6 in the overall framework?",
+    "answer": "It addresses robustness and optimality in settings with multiple downstream users and varying compliance.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the challenge of prediction in settings with limited data?",
+    "answer": "By allowing human input to supplement predictions when algorithms are data-constrained.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework imply about the role of calibration in predictive algorithms?",
+    "answer": "Calibration is essential for identifying indistinguishable subsets and refining predictions.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework operationalize the integration of human feedback?",
+    "answer": "Through a method that uses feedback only when it improves upon algorithmic predictions.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the impact of the framework on the reliability of prediction systems?",
+    "answer": "It increases reliability by incorporating human input where algorithms are informationally limited.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the issue of prediction in the presence of heterogeneous user behavior?",
+    "answer": "By ensuring predictor robustness to independent compliance decisions by downstream users.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework suggest about the limitations of deep learning models in medical imaging?",
+    "answer": "They may perform well but can miss context accessible to physicians, necessitating human input in some cases.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework provide a general approach to human-AI collaboration?",
+    "answer": "By defining conditions for collaboration based on algorithmic indistinguishability and predictive improvement.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the role of quantification in the framework's method for incorporating human feedback?",
+    "answer": "It ensures that feedback is only used when it provides a measurable benefit over algorithms.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the challenge of integrating feedback from multiple experts?",
+    "answer": "By targeting feedback to cases where it improves predictions over algorithmic models, regardless of the number of experts.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the theoretical impact of the framework on the understanding of prediction limits?",
+    "answer": "It clarifies where algorithmic prediction is fundamentally limited and where human input can extend those limits.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the challenge of prediction in ambiguous or borderline cases?",
+    "answer": "By leveraging human input in algorithmically indistinguishable subsets where ambiguity exists.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework imply about the allocation of human effort in prediction tasks?",
+    "answer": "Effort should be focused on cases where it provides the greatest improvement over algorithms.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework inform the design of human-AI interfaces in prediction systems?",
+    "answer": "By specifying when human input should be solicited based on algorithmic indistinguishability.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What is the significance of the framework for predictive tasks beyond healthcare?",
+    "answer": "It generalizes to any domain where algorithms face informational or computational constraints.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "How does the framework address the challenge of prediction in rapidly changing environments?",
+    "answer": "By allowing human input to compensate for algorithmic limitations due to outdated or incomplete data.",
+    "paper_id": "paper2"
+  },
+  {
+    "question": "What does the framework imply about the potential for dynamic collaboration between humans and AI?",
+    "answer": "Collaboration should be adaptive, responding to the strengths and limitations of each in real time.",
+    "paper_id": "paper2"
+  }
+]

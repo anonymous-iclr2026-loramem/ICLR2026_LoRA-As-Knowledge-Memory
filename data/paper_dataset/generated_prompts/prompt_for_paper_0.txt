@@ -1,0 +1,69 @@
+You are an expert academic assistant tasked with creating a high-quality question-answering dataset from a research paper's introduction. Your goal is to generate 30 question-and-answer pairs based exclusively on the provided text.
+
+Instructions and Rules:
+Source Grounding: All questions and answers MUST be derived solely from the provided introduction text. Do not use any external knowledge or make assumptions beyond what is written.
+
+Question Hierarchy: You must create questions across three distinct levels of understanding, as defined below.
+
+Quantity: Generate exactly 30 pairs in total: 10 for Level 1, 10 for Level 2, and 10 for Level 3.
+
+Output Format: The output must be a single, valid JSON array of objects. Do not include any explanatory text, comments, or markdown formatting before or after the JSON code block.
+
+Question Level Definitions:
+Level 1: Key Information Recall (10 Questions)
+
+Objective: To test the recall of specific, explicitly stated facts, proper nouns, terminology, and figures from the text.
+
+Question Type: "What is...?", "What are the names of...?", "Which X was mentioned...?"
+
+Level 2: Contextual Comprehension (10 Questions)
+
+Objective: To test the understanding of relationships between concepts, such as cause-and-effect, problem-solution, comparisons, and the function of a component.
+
+Question Type: "Why does...?", "What is the effect of A on B?", "How does X work?", "What is the difference between A and B?"
+
+Level 3: Logical Structure Inference (10 Questions)
+
+Objective: To test the understanding of the overall logical flow of the text, including identifying the core problem, the research gap, the proposed solution, and the main contribution.
+
+Question Type: "What is the core problem the authors aim to solve?", "What research gap does this paper intend to fill?", "What is the main advantage of the proposed method?", "Summarize the key contribution of this work in relation to prior limitations."
+
+Desired JSON Output Format:
+The final output MUST be a JSON array containing 30 objects. Each object must have three keys: level (integer: 1, 2, or 3), question (string), and answer (string).
+
+Example:
+
+[
+  {
+    "level": 1,
+    "question": "What is the full name of the algorithm the authors integrate their estimator into?",
+    "answer": "The authors integrated their estimator into the Generalized Successive Elimination algorithm."
+  },
+  {
+    "level": 2,
+    "question": "According to the text, what is the inverse relationship between response time and preference strength?",
+    "answer": "The text states that users who strongly prefer to skip a product tend to do so quickly, while longer response times can indicate weaker preferences."
+  },
+  {
+    "level": 3,
+    "question": "What is the core reason complex psychological models are impractical for real-time systems, and how does this paper's proposal address it?",
+    "answer": "They are impractical because they rely on computationally intensive methods like hierarchical Bayesian inference and MLE. This paper addresses it by proposing a computationally efficient method that frames utility estimation as a linear regression problem."
+  }
+]
+
+Introduction Text to Analyze:
+Title: Monte Carlo Tree Diffusion for System 2 Planning
+
+Diffusion models have recently emerged as a powerful approach to planning, enabling the generation of complex trajectories by modeling trajectory distributions using large-scale offline data (Janner et al., 2022; Ajay et al., 2023; Zhou et al., 2024; Chen et al., 2024a, c, b). Unlike traditional autoregressive planning methods, diffusion-based planners, such as Diffuser (Janner et al., 2022), generate entire trajectories holistically through a series of denoising steps, eliminating the need for a forward dynamics model. This approach effectively addresses key limitations of forward models, such as poor long-term dependency modeling and error accumulation (Hafner et al., 2022; Hamed et al., 2024), making it particularly well-suited for planning tasks with long horizons or sparse rewards.
+
+Despite their strengths, it remains uncertain how diffusion-based planners can effectively enhance planning accuracy through the computation scaling on the inference time—a property referred to as inference-time scalability. One potential approach is to increase the number of denoising steps or, alternatively, draw additional samples (Zhou et al., 2024). However, it is known that performance gains from increasing denoising steps plateau quickly (Karras et al., 2022; Song et al., 2021a, b), and independent random searches with multiple samples are highly inefficient as they fail to leverage information from other samples. Moreover, how to effectively manage the exploration-exploitation tradeoff within this framework also remains unclear.
+
+In contrast, Monte Carlo Tree Search (MCTS) (Coulom, 2007), a widely adopted planning method, demonstrates robust inference-time scalability. By leveraging iterative simulations, MCTS refines decisions and adapts based on exploratory feedback, making it highly effective in improving planning accuracy as more computation is allocated. This capability has established MCTS as a cornerstone in many System 2 reasoning tasks, such as mathematical problem-solving (Guan et al., 2025; Zhang et al., 2024a) and program synthesis (Brandfonbrener et al., 2024). However, unlike diffusion-based planners, traditional MCTS relies on a forward model for tree rollouts, inheriting its limitations including losing global consistency. In addition to being restricted to discrete action spaces, the resulting search tree can grow excessively large in both depth and width. This leads to significant computational demands, particularly in scenarios involving long horizons and large action spaces.
+
+This raises a crucial question: how can we combine the strengths of Diffuser and MCTS to overcome their limitations and enhance the inference-time scalability of diffusion-based planning? To address this, we propose Monte Carlo Tree Diffusion (MCTD), a framework that integrates diffusion-based trajectory generation with the iterative search capabilities of MCTS for more efficient and scalable planning.
+
+MCTD builds on three key innovations. First, it restructures denoising into a tree-based rollout process, enabling semi-autoregressive causal planning while maintaining trajectory coherence. Second, it introduces guidance levels as meta-actions to dynamically balance exploration and exploitation, ensuring adaptive and scalable trajectory refinement within the diffusion framework. Third, it employs fast jumpy denoising as a simulation mechanism, efficiently estimating trajectory quality without costly forward model rollouts. These innovations enable the four steps of MCTS (Selection, Expansion, Simulation, and Backpropagation) within diffusion planning, effectively bridging structured search with generative modeling. Experimental results show that MCTD outperforms existing approaches in long-horizon tasks, achieving superior scalability and solution quality.
+
+The main contributions of this paper are as follows: First, to the best of our knowledge, this is the first work to propose an MCTS-integrated diffusion planning framework that explicitly incorporates the four steps of MCTS, providing an effective inference-time scaling method for diffusion models. Second, we introduce three key innovations: Denoising as Tree-Rollout, Guidance Levels as Meta-Actions, and Jumpy Denoising as Fast Simulation. Lastly, we present experimental results demonstrating the effectiveness of MCTD.
+
+Now, generate the 30 Q&A pairs in the specified JSON format based on the text provided above.

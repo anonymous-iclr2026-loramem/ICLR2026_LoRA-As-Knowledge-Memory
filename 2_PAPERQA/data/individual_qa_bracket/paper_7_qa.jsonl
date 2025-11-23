@@ -1,0 +1,40 @@
+{"question": "[Paper ID: 7] What consistently elevates next-token prediction accuracy in large language models?", "answer": "Scaling up model parameters and dataset size."}
+{"question": "[Paper ID: 7] Why is training on all available data not always optimal or feasible for large language models?", "answer": "It may include noisy or irrelevant data, and can be computationally expensive or introduce biases."}
+{"question": "[Paper ID: 7] What technique is used to improve data quality for training large language models?", "answer": "Data filtering using heuristics and classifiers."}
+{"question": "[Paper ID: 7] What is a potential downside of removing noisy tokens from high-quality datasets?", "answer": "It might alter the text’s meaning or exclude useful data."}
+{"question": "[Paper ID: 7] What can overly strict filtering of training data lead to?", "answer": "It can lead to biases and the exclusion of useful data."}
+{"question": "[Paper ID: 7] Why might the distribution of web data not be ideal for downstream applications?", "answer": "Web data may contain undesirable content, hallucinations, or ambiguous tokens not suitable for specific applications."}
+{"question": "[Paper ID: 7] What is a consequence of applying the same loss to all tokens during training?", "answer": "It can result in inefficient computation on non-essential tokens, potentially limiting model intelligence."}
+{"question": "[Paper ID: 7] What did the researchers examine to explore language model learning at the token level?", "answer": "Training dynamics, specifically how token-level loss evolves during pretraining."}
+{"question": "[Paper ID: 7] How did the researchers categorize tokens during their analysis?", "answer": "They categorized tokens into 'easy tokens' (already learned) and 'hard tokens' (variable losses, resist convergence)."}
+{"question": "[Paper ID: 7] What is the issue with 'hard tokens' in language model training?", "answer": "They exhibit variable losses and resist convergence, leading to ineffective gradient updates."}
+{"question": "[Paper ID: 7] What novel objective do Rho-1 models use for training?", "answer": "Selective Language Modeling (SLM)."}
+{"question": "[Paper ID: 7] How does the Selective Language Modeling (SLM) approach work?", "answer": "It inputs the full sequence and selectively removes the loss of undesired tokens during training."}
+{"question": "[Paper ID: 7] What is the first step in the SLM pipeline?", "answer": "Training a reference language model on high-quality corpora to establish utility metrics for scoring tokens."}
+{"question": "[Paper ID: 7] How are tokens scored in the SLM pipeline?", "answer": "The reference model scores each token in a corpus using its loss."}
+{"question": "[Paper ID: 7] Which tokens does SLM select for training the final language model?", "answer": "Tokens that exhibit a high excess loss between the reference and training model, benefiting downstream applications."}
+{"question": "[Paper ID: 7] What is the main benefit of SLM shown by experiments?", "answer": "SLM enhances token efficiency during training and improves performance on downstream tasks."}
+{"question": "[Paper ID: 7] How does SLM affect perplexity scores on benchmarks?", "answer": "Models trained with selected tokens using SLM show improved perplexity scores."}
+{"question": "[Paper ID: 7] How did Rho-1 models perform on math continual pretraining compared to CLM-trained baselines?", "answer": "Rho-1 models outperformed CLM-trained baselines by over 16% on GSM8k and MATH datasets."}
+{"question": "[Paper ID: 7] How much faster does SLM reach baseline accuracy compared to traditional training?", "answer": "SLM reaches baseline accuracy up to 10 times faster."}
+{"question": "[Paper ID: 7] How does Rho-1-7B's performance compare to DeepSeekMath-7B in terms of efficiency?", "answer": "Rho-1-7B matches DeepSeekMath-7B's state-of-the-art performance using only 15B tokens versus 500B tokens."}
+{"question": "[Paper ID: 7] What accuracy did Rho-1-1B achieve on MATH after fine-tuning?", "answer": "40.6% accuracy."}
+{"question": "[Paper ID: 7] What accuracy did Rho-1-7B achieve on MATH after fine-tuning?", "answer": "51.8% accuracy."}
+{"question": "[Paper ID: 7] Why is Rho-1-1B notable in the context of 1B parameter language models?", "answer": "It is the first 1B LM to exceed 40% accuracy, approaching early GPT-4’s CoT performance."}
+{"question": "[Paper ID: 7] What average improvement did SLM provide when training Tinyllama-1B on 80B tokens?", "answer": "SLM improved performance by 6.8% on average across 15 benchmarks."}
+{"question": "[Paper ID: 7] In which tasks did SLM show gains over 10% for Tinyllama-1B?", "answer": "Code and math tasks."}
+{"question": "[Paper ID: 7] What does §3.4 demonstrate regarding SLM usage without high-quality reference data?", "answer": "SLM can use self-referencing, leading to an average improvement of up to 3.3% on downstream tasks."}
+{"question": "[Paper ID: 7] Why is data filtering considered crucial in training large language models?", "answer": "It improves data quality and boosts model performance by selecting appropriate training documents."}
+{"question": "[Paper ID: 7] Which type of filtering is performed in SLM at the token level?", "answer": "Selective removal of loss from undesired tokens."}
+{"question": "[Paper ID: 7] What is a utility metric in the context of SLM?", "answer": "A score assigned to tokens to reflect their relevance to the desired distribution."}
+{"question": "[Paper ID: 7] What problem can occur if too many useful tokens are filtered out during training?", "answer": "It can lead to biases and decreased model performance."}
+{"question": "[Paper ID: 7] What is meant by 'token efficiency' in model training?", "answer": "Maximizing learning from the most relevant tokens, improving training speed and effectiveness."}
+{"question": "[Paper ID: 7] How does SLM determine which tokens are most beneficial for learning?", "answer": "By comparing token loss between a reference model and the training model, selecting those with high excess loss."}
+{"question": "[Paper ID: 7] What is the impact of noisy tokens on model training?", "answer": "They negatively affect training and may reduce model performance."}
+{"question": "[Paper ID: 7] What is one drawback of document-level filtering?", "answer": "It may leave noisy tokens in high-quality datasets that harm training."}
+{"question": "[Paper ID: 7] How does SLM help achieve advanced levels of model intelligence?", "answer": "By focusing training on essential and challenging tokens, improving learning efficiency."}
+{"question": "[Paper ID: 7] What are 'easy tokens' in the context of language model training?", "answer": "Tokens that are already learned and do not contribute much to further loss reduction."}
+{"question": "[Paper ID: 7] What are 'hard tokens' in the context of language model training?", "answer": "Tokens that exhibit variable losses, resist convergence, and are harder for the model to predict."}
+{"question": "[Paper ID: 7] Which benchmarks were used to demonstrate SLM's effectiveness?", "answer": "GSM8k and MATH datasets, and 15 benchmarks for Tinyllama-1B."}
+{"question": "[Paper ID: 7] What is 'continual pretraining' in language models?", "answer": "Further training a model on specific datasets to improve performance on targeted tasks."}
+{"question": "[Paper ID: 7] What is self-referencing in the context of SLM?", "answer": "Using the same model as its own reference for scoring tokens when high-quality reference data is unavailable."}

@@ -1,0 +1,65 @@
+You are an expert academic assistant tasked with creating a high-quality question-answering dataset from a research paper's introduction. Your goal is to generate 30 question-and-answer pairs based exclusively on the provided text.
+
+Instructions and Rules:
+Source Grounding: All questions and answers MUST be derived solely from the provided introduction text. Do not use any external knowledge or make assumptions beyond what is written.
+
+Question Hierarchy: You must create questions across three distinct levels of understanding, as defined below.
+
+Quantity: Generate exactly 30 pairs in total: 10 for Level 1, 10 for Level 2, and 10 for Level 3.
+
+Output Format: The output must be a single, valid JSON array of objects. Do not include any explanatory text, comments, or markdown formatting before or after the JSON code block.
+
+Question Level Definitions:
+Level 1: Key Information Recall (10 Questions)
+
+Objective: To test the recall of specific, explicitly stated facts, proper nouns, terminology, and figures from the text.
+
+Question Type: "What is...?", "What are the names of...?", "Which X was mentioned...?"
+
+Level 2: Contextual Comprehension (10 Questions)
+
+Objective: To test the understanding of relationships between concepts, such as cause-and-effect, problem-solution, comparisons, and the function of a component.
+
+Question Type: "Why does...?", "What is the effect of A on B?", "How does X work?", "What is the difference between A and B?"
+
+Level 3: Logical Structure Inference (10 Questions)
+
+Objective: To test the understanding of the overall logical flow of the text, including identifying the core problem, the research gap, the proposed solution, and the main contribution.
+
+Question Type: "What is the core problem the authors aim to solve?", "What research gap does this paper intend to fill?", "What is the main advantage of the proposed method?", "Summarize the key contribution of this work in relation to prior limitations."
+
+Desired JSON Output Format:
+The final output MUST be a JSON array containing 30 objects. Each object must have three keys: level (integer: 1, 2, or 3), question (string), and answer (string).
+
+Example:
+
+[
+  {
+    "level": 1,
+    "question": "What is the full name of the algorithm the authors integrate their estimator into?",
+    "answer": "The authors integrated their estimator into the Generalized Successive Elimination algorithm."
+  },
+  {
+    "level": 2,
+    "question": "According to the text, what is the inverse relationship between response time and preference strength?",
+    "answer": "The text states that users who strongly prefer to skip a product tend to do so quickly, while longer response times can indicate weaker preferences."
+  },
+  {
+    "level": 3,
+    "question": "What is the core reason complex psychological models are impractical for real-time systems, and how does this paper's proposal address it?",
+    "answer": "They are impractical because they rely on computationally intensive methods like hierarchical Bayesian inference and MLE. This paper addresses it by proposing a computationally efficient method that frames utility estimation as a linear regression problem."
+  }
+]
+
+Introduction Text to Analyze:
+Title: Efficient and Accurate Explanation Estimation with Distribution Compression
+
+Computationally efficient estimation of post-hoc explanations is at the forefront of current research on explainable machine learning (Strumbelj & Kononenko, 2010; Slack et al., 2021; Jethani et al., 2022; Chen et al., 2023; Donnelly et al., 2023; Muschalik et al., 2024). The majority of the work focuses on improving efficiency with respect to the dimension of features (Covert et al., 2020; Jethani et al., 2022; Chen et al., 2023; Fumagalli et al., 2023), specific model classes like neural networks (Erion et al., 2021; Chen et al., 2024) and decision trees (Muschalik et al., 2024), or approximating the conditional feature distribution (Chen et al., 2018; Aas et al., 2021; Olsen et al., 2022; 2024).
+
+However, in many practical settings, a marginal feature distribution is used instead to estimate explanations, and i.i.d. samples from the data typically form the so-called background data samples, also known as reference points or baselines, which plays a crucial role in the estimation process (Lundberg & Lee, 2017; Scholbeck et al., 2020; Erion et al., 2021; Ghalebikesabi et al., 2021; Lundstrom et al., 2022). For example, Covert et al. (2020) mention “[O]ur sampling approximation for SAGE was run using draws from the marginal distribution. We used a fixed set of 512 background samples […]” and we provide more such references in Appendix A to motivate our research question: Can we reliably improve on standard i.i.d. sampling in explanation estimation?
+
+We make a connection to research on statistical theory, where kernel thinning (kt, Dwivedi & Mackey, 2021; 2022) was introduced to compress a distribution more effectively than with i.i.d. sampling. kt has an efficient implementation in the compress++ algorithm (Shetty et al., 2022) and was applied to improve statistical kernel testing (Domingo-Enrich et al., 2023). Building on this line of work, this paper aims to thoroughly quantify the error introduced by the current sample then explain paradigm in feature marginalization, which is involved in the estimation of both local and global removal-based explanations (Covert et al., 2021). We propose an efficient way to reduce this approximation error based on distribution compression (Figure 1).
+
+Contribution. In summary, our work advances literature in multiple ways: (1) Quantifying the error of standard i.i.d. sampling: We bring to attention and measure the approximation error introduced by using i.i.d. sampling of background and foreground data in various explanation methods. It may even lead to changes in feature importance rankings. (2) Compress then explain (cte): We introduce a new paradigm of sample-efficient explainability where post-hoc explanations, like feature attributions and effects, are estimated based on a marginal distribution compressed more efficiently than with i.i.d. sampling. cte is theoretically justified as we discover a connection between explanation estimation and distribution compression. (3) Kernel thinning for (explainable) machine learning: We show empirically that kt outperforms i.i.d. sampling in compressing the distribution of popular datasets used in research on explainable machine learning. In fact, this is the first work to evaluate distribution compression via kt on datasets for supervised learning, which itself is valuable. (4) Decreasing the computational cost of explanation estimation: We benchmark compress then explain (cte) with popular explanation methods and show it results in more accurate explanations of smaller variance. cte often achieves on-par error using 2–3× fewer samples, i.e. requiring 2–3× fewer model inferences. cte is a simple, yet powerful, plug-in for a broad class of methods that sample from a dataset, e.g. removal-based and global explanations.
+
+Now, generate the 30 Q&A pairs in the specified JSON format based on the text provided above.

@@ -1,0 +1,587 @@
+[
+  {
+    "question": "How do diffusion-based planners address the limitations of forward dynamics models in planning tasks?",
+    "answer": "Diffusion-based planners generate trajectories holistically through denoising steps, eliminating the need for a forward model and thus mitigating poor long-term dependency modeling and error accumulation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why are diffusion-based planners particularly suitable for tasks with long horizons or sparse rewards?",
+    "answer": "They avoid error accumulation and poor long-term dependency modeling by generating entire trajectories at once, which is beneficial for long-horizon and sparse-reward tasks.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is inference-time scalability, and why is it important in planning frameworks?",
+    "answer": "Inference-time scalability refers to the ability to improve planning accuracy by allocating more computation during inference, which is crucial for adapting and refining decisions in complex tasks.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why does increasing the number of denoising steps in diffusion-based planners not always lead to improved performance?",
+    "answer": "Performance gains plateau quickly when denoising steps are increased, as shown in prior research.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the inefficiency associated with independent random searches using multiple samples in diffusion-based planning?",
+    "answer": "They fail to leverage information from other samples, resulting in highly inefficient exploration.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTS achieve robust inference-time scalability compared to diffusion-based planners?",
+    "answer": "MCTS refines decisions iteratively using simulations and adapts based on exploratory feedback, improving planning accuracy with increased computation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What are the major limitations of traditional MCTS that diffusion-based planners overcome?",
+    "answer": "Traditional MCTS relies on forward models, loses global consistency, is restricted to discrete action spaces, and can produce excessively large search trees.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is combining the strengths of Diffuser and MCTS considered a crucial question in the paper?",
+    "answer": "Because it could overcome the limitations of each method and enhance the scalability and efficiency of diffusion-based planning.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the primary goal of the proposed Monte Carlo Tree Diffusion (MCTD) framework?",
+    "answer": "To integrate diffusion-based trajectory generation with iterative MCTS search for more efficient and scalable planning.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD restructure the denoising process, and what advantage does this provide?",
+    "answer": "MCTD restructures denoising into a tree-based rollout, enabling semi-autoregressive causal planning while maintaining trajectory coherence.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What role do guidance levels play in MCTD, and how do they affect planning?",
+    "answer": "Guidance levels act as meta-actions to dynamically balance exploration and exploitation, allowing adaptive and scalable trajectory refinement.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Describe the concept of jumpy denoising in MCTD and its impact on simulation efficiency.",
+    "answer": "Jumpy denoising is a fast simulation mechanism that estimates trajectory quality efficiently without costly forward model rollouts.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD enable the four steps of MCTS within diffusion planning?",
+    "answer": "By implementing Selection, Expansion, Simulation, and Backpropagation using structured search and generative modeling within the diffusion process.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What experimental results are reported about MCTD’s performance?",
+    "answer": "MCTD outperforms existing approaches in long-horizon tasks, achieving superior scalability and solution quality.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "List the three key innovations introduced in MCTD.",
+    "answer": "Denoising as Tree-Rollout, Guidance Levels as Meta-Actions, and Jumpy Denoising as Fast Simulation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is MCTD considered the first of its kind according to the paper?",
+    "answer": "It is the first framework to integrate MCTS explicitly into diffusion planning, incorporating all four MCTS steps for inference-time scaling.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What are the main contributions of the paper as outlined in the introduction?",
+    "answer": "The MCTS-integrated diffusion planning framework, three key innovations, and experimental validation of MCTD’s effectiveness.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD bridge the gap between structured search and generative modeling?",
+    "answer": "By integrating MCTS’s structured search steps into the generative trajectory process of diffusion models.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "In what types of tasks does MCTD demonstrate superiority over previous methods?",
+    "answer": "Long-horizon planning tasks.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the significance of semi-autoregressive causal planning in MCTD?",
+    "answer": "It allows for stepwise trajectory generation while maintaining overall coherence, improving planning accuracy.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD handle the exploration-exploitation tradeoff in planning?",
+    "answer": "Through guidance levels as meta-actions that dynamically balance exploration and exploitation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why are forward model rollouts considered costly in traditional MCTS?",
+    "answer": "They require simulating each action in detail, leading to large computational demands, especially in long-horizon and large action space scenarios.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does the tree-based rollout in MCTD differ from traditional denoising in diffusion models?",
+    "answer": "It structures denoising as a branching process, enabling causal planning and trajectory coherence unlike standard holistic denoising.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD improve scalability compared to traditional MCTS and diffusion planners?",
+    "answer": "By combining efficient simulation with adaptive trajectory refinement, reducing computational demands while enhancing solution quality.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is meant by ‘trajectory coherence’ in the context of MCTD?",
+    "answer": "Maintaining logical consistency and continuity across the generated trajectory.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "In what way does MCTD’s simulation mechanism differ from that of traditional MCTS?",
+    "answer": "It uses jumpy denoising for fast simulation rather than relying on forward model rollouts.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD manage the size of the search tree compared to traditional MCTS?",
+    "answer": "By employing efficient simulation and meta-actions, it avoids excessive growth in depth and width.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the main inefficiency of independent random searches in diffusion-based planners?",
+    "answer": "They do not share information between samples, making exploration inefficient.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is global consistency important in planning, and how does MCTD address it?",
+    "answer": "Global consistency ensures the coherence of the entire plan; MCTD maintains it through tree-based denoising.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Explain the role of meta-actions in MCTD.",
+    "answer": "Meta-actions, represented by guidance levels, control the balance between exploration and exploitation during planning.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What does ‘fast jumpy denoising’ enable in MCTD’s simulation step?",
+    "answer": "Efficient trajectory quality estimation without expensive forward model rollouts.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD maintain adaptive trajectory refinement?",
+    "answer": "By dynamically adjusting guidance levels based on exploration and exploitation needs.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What problem does MCTD solve that neither Diffuser nor MCTS could address alone?",
+    "answer": "Efficient, scalable planning with inference-time adaptability, trajectory coherence, and reduced computational cost.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is the restriction to discrete action spaces a limitation for traditional MCTS?",
+    "answer": "It limits applicability to tasks requiring continuous or complex action spaces.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s approach to simulation benefit long-horizon tasks?",
+    "answer": "It efficiently estimates trajectory quality, making planning feasible for tasks with many steps.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does the integration of MCTS steps into diffusion planning improve solution quality?",
+    "answer": "It allows for iterative refinement and adaptive exploration, leading to better plans.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What planning domains are mentioned as benefiting from MCTS’s inference-time scalability?",
+    "answer": "Mathematical problem solving and program synthesis.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s tree-based denoising differ from holistic trajectory generation in standard diffusion models?",
+    "answer": "It generates trajectories in a semi-autoregressive, causal manner rather than all at once.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the relationship between computation allocation and planning accuracy in MCTS?",
+    "answer": "Increasing computation allows more simulations, which refines decisions and improves accuracy.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD ensure scalable trajectory refinement within the diffusion framework?",
+    "answer": "By using guidance levels to adaptively balance exploration and exploitation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What are the four steps of MCTS, and how are they incorporated into MCTD?",
+    "answer": "Selection, Expansion, Simulation, and Backpropagation are implemented within diffusion planning using tree-based denoising and fast simulation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD outperform existing approaches according to experimental results?",
+    "answer": "By achieving superior scalability and solution quality in long-horizon tasks.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What aspect of planning does MCTD’s guidance levels specifically target?",
+    "answer": "The dynamic balance between exploration and exploitation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is error accumulation problematic in forward model-based planning?",
+    "answer": "It leads to compounding mistakes over long trajectories, reducing planning reliability.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s simulation mechanism differ fundamentally from traditional approaches?",
+    "answer": "It uses jumpy denoising instead of costly forward model rollouts.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "In what way is MCTD’s denoising process ‘semi-autoregressive’?",
+    "answer": "It generates parts of the trajectory stepwise, allowing causal dependencies while maintaining overall coherence.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the significance of adaptive trajectory refinement in MCTD?",
+    "answer": "It allows the planner to improve plans dynamically as more computation is allocated.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s approach to planning differ from purely autoregressive methods?",
+    "answer": "It generates trajectories holistically and causally through tree-based denoising, rather than step-by-step prediction.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the main computational challenge in traditional MCTS for long-horizon tasks?",
+    "answer": "The search tree can become excessively large in depth and width, demanding significant computation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s framework benefit from combining structured search with generative modeling?",
+    "answer": "It leverages the strengths of both approaches, achieving efficient and coherent planning.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is maintaining trajectory coherence important in planning algorithms?",
+    "answer": "It ensures that the generated plan is logically consistent and feasible.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD enable inference-time scaling for diffusion models?",
+    "answer": "By integrating MCTS’s iterative search steps and adaptive computation allocation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What prior works are referenced as foundational for diffusion-based planning?",
+    "answer": "Janner et al., 2022; Ajay et al., 2023; Zhou et al., 2024; Chen et al., 2024a;c;b.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What evidence is provided to support the claim that MCTD is effective?",
+    "answer": "Experimental results showing superior scalability and solution quality.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s use of meta-actions differ from standard action selection in planning?",
+    "answer": "Meta-actions guide the balance between exploration and exploitation rather than selecting specific actions.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is it important for planning algorithms to manage the exploration-exploitation tradeoff?",
+    "answer": "Balancing exploration and exploitation leads to more efficient and effective search for optimal solutions.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What does the term ‘jumpy’ in jumpy denoising imply about the simulation process?",
+    "answer": "It suggests fast, non-sequential estimation of trajectory quality.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s approach to trajectory generation compare to Diffuser’s?",
+    "answer": "MCTD uses tree-based denoising for causal, coherent planning, while Diffuser generates trajectories holistically.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What scalability challenges do large action spaces present, and how does MCTD address them?",
+    "answer": "Large action spaces can lead to huge search trees; MCTD uses efficient simulation and meta-actions to manage this complexity.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What does ‘structured search’ refer to in the context of MCTD?",
+    "answer": "The systematic, iterative exploration and refinement of plans using MCTS principles.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s fast simulation mechanism contribute to computational efficiency?",
+    "answer": "It avoids expensive forward model rollouts by quickly estimating trajectory quality.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is the integration of all four MCTS steps into diffusion planning considered novel?",
+    "answer": "Previous approaches did not explicitly incorporate Selection, Expansion, Simulation, and Backpropagation into diffusion models.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD adapt its planning process as more computation is allocated?",
+    "answer": "By iteratively refining trajectories using MCTS steps and adjusting guidance levels.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the role of experimental validation in establishing MCTD’s effectiveness?",
+    "answer": "It provides empirical evidence that MCTD outperforms existing methods in scalability and solution quality.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why do performance gains from increasing denoising steps plateau in diffusion-based planning?",
+    "answer": "Because additional denoising steps yield diminishing returns in trajectory quality improvement.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD maintain global consistency during planning?",
+    "answer": "By structuring denoising as a tree-based process, ensuring coherence across the trajectory.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the impact of error accumulation in the context of forward model rollouts?",
+    "answer": "It degrades the accuracy of long-term plans, making them unreliable.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s simulation step differ from the simulation step in traditional MCTS?",
+    "answer": "MCTD uses fast jumpy denoising instead of detailed forward model rollouts.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What does the paper claim about the novelty of integrating MCTS into diffusion planning?",
+    "answer": "It is the first to explicitly incorporate all four MCTS steps into diffusion planning.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD address the inefficiency of independent random searches in diffusion models?",
+    "answer": "By structuring trajectory generation as a tree-based process that shares information across branches.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the main advantage of combining MCTS’s iterative search with diffusion-based trajectory generation?",
+    "answer": "It enables efficient, scalable, and coherent planning adaptable to computation allocation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s guidance mechanism differ from traditional exploration strategies?",
+    "answer": "It uses meta-actions to dynamically adjust exploration and exploitation, rather than fixed strategies.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What are the computational implications of excessively large search trees in traditional MCTS?",
+    "answer": "They require significant computation, making planning infeasible for long horizons and large action spaces.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s framework enable structured exploration during planning?",
+    "answer": "By integrating tree-based denoising and meta-actions for adaptive search.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What role does causal planning play in MCTD’s trajectory generation?",
+    "answer": "It ensures that each step of the trajectory depends logically on previous steps.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s semi-autoregressive approach impact trajectory quality?",
+    "answer": "It maintains coherence and causal dependencies, improving overall trajectory quality.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the significance of the experimental results presented in the paper?",
+    "answer": "They demonstrate that MCTD achieves better scalability and solution quality than existing methods.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s approach to inference-time scalability differ from previous diffusion models?",
+    "answer": "It enables effective scaling by integrating MCTS’s iterative search and adaptive refinement.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is balancing exploration and exploitation critical in scalable planning frameworks?",
+    "answer": "It ensures efficient search, preventing both premature convergence and wasted computation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What mechanism does MCTD use to estimate trajectory quality efficiently?",
+    "answer": "Fast jumpy denoising.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s tree-based rollout process contribute to planning efficiency?",
+    "answer": "It allows for structured, causal exploration of possible trajectories.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What limitation of forward models is directly addressed by diffusion-based planners?",
+    "answer": "Poor modeling of long-term dependencies and error accumulation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s framework facilitate adaptive planning during inference?",
+    "answer": "By enabling dynamic adjustment of guidance levels and iterative trajectory refinement.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What advantage does jumpy denoising offer over traditional simulation methods?",
+    "answer": "It provides fast, efficient estimation without detailed forward model rollouts.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD integrate generative modeling into structured search?",
+    "answer": "By using diffusion-based trajectory generation within the MCTS search tree.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is scalability important in planning algorithms for long-horizon tasks?",
+    "answer": "Because such tasks require handling many steps, making efficient computation essential.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How do meta-actions in MCTD facilitate scalable trajectory refinement?",
+    "answer": "They allow dynamic control over exploration and exploitation, adapting as needed.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What challenge does MCTD address that arises when increasing the number of samples in diffusion planning?",
+    "answer": "It avoids the inefficiency of independent random searches by sharing information across samples.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s approach benefit tasks with sparse rewards?",
+    "answer": "By maintaining trajectory coherence and enabling efficient search, it can find successful plans despite sparse feedback.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the relationship between tree-based rollout and trajectory coherence in MCTD?",
+    "answer": "Tree-based rollout structures the plan causally, ensuring coherence across the trajectory.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s framework differ from purely generative planning models?",
+    "answer": "It combines generative trajectory generation with structured, iterative search.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the impact of integrating MCTS steps into diffusion planning on solution quality?",
+    "answer": "It allows for iterative improvement, leading to higher-quality solutions.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is the explicit incorporation of Selection, Expansion, Simulation, and Backpropagation into diffusion models significant?",
+    "answer": "It enables structured, adaptive planning within generative frameworks, improving scalability and accuracy.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What does the term ‘System 2 Planning’ refer to in the context of this paper?",
+    "answer": "Reasoning tasks that require deliberate, structured processes, such as mathematical problem-solving and program synthesis.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s approach to simulation affect computational cost compared to traditional MCTS?",
+    "answer": "It reduces cost by using fast jumpy denoising instead of detailed forward rollouts.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What evidence supports the claim that MCTD is scalable?",
+    "answer": "Experimental results showing improved performance in long-horizon tasks.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD leverage information between samples during planning?",
+    "answer": "By structuring trajectory generation as a tree, allowing information sharing across branches.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is it important for planning algorithms to be adaptable to computation allocation?",
+    "answer": "Adaptability allows for improved accuracy and solution quality as more resources are dedicated to planning.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD ensure efficient exploration of large action spaces?",
+    "answer": "Through structured tree-based search and dynamic guidance levels.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What limitation of traditional MCTS is addressed by jumpy denoising in MCTD?",
+    "answer": "The computational expense of forward model rollouts.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s framework contribute to the field of generative planning models?",
+    "answer": "It introduces structured, adaptive search to generative trajectory generation, enhancing scalability and solution quality.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What are the computational benefits of semi-autoregressive causal planning in MCTD?",
+    "answer": "It allows stepwise refinement and coherence without excessive computation.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s approach to trajectory generation impact planning accuracy?",
+    "answer": "By maintaining coherence and enabling iterative refinement, it improves planning accuracy.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the role of offline data in diffusion-based planning models?",
+    "answer": "It is used to model trajectory distributions for generating complex plans.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD differ from traditional autoregressive planning methods?",
+    "answer": "It generates trajectories holistically and causally using tree-based denoising, rather than step-by-step prediction.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is forward model reliance considered a limitation in planning algorithms?",
+    "answer": "It leads to poor long-term dependency modeling, error accumulation, and high computational cost.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s integration of MCTS steps improve inference-time scalability?",
+    "answer": "It allows for iterative, adaptive planning as more computation is allocated during inference.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What planning challenges does MCTD address that arise in tasks with large action spaces?",
+    "answer": "It manages computational complexity and enables efficient search through structured, adaptive mechanisms.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s tree-based rollout process affect exploration efficiency?",
+    "answer": "It allows for systematic, shared exploration across possible trajectories.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the relationship between guidance levels and trajectory refinement in MCTD?",
+    "answer": "Guidance levels dynamically control the degree of exploration and exploitation, refining trajectories adaptively.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD facilitate the backpropagation step of MCTS within diffusion planning?",
+    "answer": "By efficiently propagating trajectory quality estimates through the tree using jumpy denoising.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the main advantage of MCTD’s fast simulation mechanism over traditional rollouts?",
+    "answer": "It enables rapid, cost-effective estimation of trajectory quality.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s framework support scalable planning in sparse-reward environments?",
+    "answer": "By maintaining trajectory coherence and efficiently refining plans using structured search.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What distinguishes MCTD from previous diffusion planning frameworks?",
+    "answer": "Explicit integration of all four MCTS steps and introduction of three key innovations.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "Why is the ability to refine decisions iteratively important in planning algorithms?",
+    "answer": "It allows for improved accuracy and solution quality as more computation is allocated.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "How does MCTD’s framework improve long-term dependency modeling compared to forward model-based approaches?",
+    "answer": "By generating coherent trajectories holistically through tree-based denoising.",
+    "paper_id": "paper1"
+  },
+  {
+    "question": "What is the impact of excessive tree depth and width in traditional MCTS, and how does MCTD mitigate this?",
+    "answer": "Excessive size increases computational demand; MCTD mitigates this with efficient simulation and adaptive search.",
+    "paper_id": "paper1"
+  }
+]

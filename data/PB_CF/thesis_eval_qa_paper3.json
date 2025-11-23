@@ -1,0 +1,592 @@
+[
+  {
+    "question": "How does the abstraction of an oscillating neuron in AKOrN differ from the binary abstraction in McCulloch-Pitts neurons?",
+    "answer": "AKOrN abstracts an oscillating neuron as an N-dimensional unit vector rotating on a sphere, whereas McCulloch-Pitts neurons use a binary state abstraction.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What neuroscientific phenomenon is the synchronization described by the Kuramoto model analogous to in the brain?",
+    "answer": "It is analogous to binding in neuroscience, where neurons synchronize to represent combined features.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "In what way does the Kuramoto model facilitate compression of neural representations?",
+    "answer": "Kuramoto synchronization encourages oscillators to align, leading to distributed and continuous clustering, which compresses representations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why might traveling waves in AKOrN be relevant for modeling cognitive functions?",
+    "answer": "Traveling waves have been postulated to be involved in short-term memory, long-range coordination, and other cognitive functions in the brain.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the role of competition among clusters of neurons according to the introduction?",
+    "answer": "Competition encourages different higher-level neurons to specialize in different aspects of the input, aiding abstraction.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN compare to slot-based models in object discovery tasks?",
+    "answer": "AKOrN achieves competitive performance to slot-based models in object discovery by strongly binding object features.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What mechanism in AKOrN is responsible for increased robustness to perturbations?",
+    "answer": "The neuronal mechanism based on Kuramoto synchronization increases robustness to random, adversarial, and natural perturbations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How do Kuramoto oscillators relate to Ising models in the context of reasoning?",
+    "answer": "Kuramoto models are continuous versions of discrete Ising models, with phase variables replacing discrete spin states.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What evidence from neuroscience supports the use of traveling waves in AKOrN?",
+    "answer": "Neuroscientific literature provides ample evidence of traveling waves involved in memory consolidation and coordination between brain regions.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is competitive learning advantageous in neural networks?",
+    "answer": "It compresses information through layers, creating an information bottleneck that facilitates abstraction.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN enhance reasoning capability in self-attention mechanisms?",
+    "answer": "AKOrN’s oscillatory mechanism enhances reasoning by binding features and facilitating neuro-symbolic reasoning.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the significance of the N-dimensional generalization of the Kuramoto model in AKOrN?",
+    "answer": "It enables modeling of synchronization and binding in higher-dimensional feature spaces, reflecting complex neural interactions.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How are spatiotemporal representations incorporated in AKOrN?",
+    "answer": "They emerge naturally as traveling waves when neighboring oscillators synchronize.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What does the process of binding in neural networks achieve?",
+    "answer": "Binding synchronizes neurons representing different features to create composite representations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How is uncertainty quantification achieved in AKOrN?",
+    "answer": "Through the robust neuronal mechanism based on well-understood physical models like Kuramoto synchronization.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the main difference between traditional deep learning building blocks and those inspired by neuroscience?",
+    "answer": "Traditional blocks are designed for hardware efficiency, while neuroscience-inspired designs focus on biological information processing principles.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What cognitive functions are traveling waves hypothesized to support in the brain?",
+    "answer": "Short-term memory, long-range coordination, and other cognitive functions.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does the AKOrN architecture update its neurons?",
+    "answer": "By iteratively applying a generalized Kuramoto differential equation to each neuron.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What are the implications of AKOrN’s ability to solve Sudoku puzzles?",
+    "answer": "It demonstrates AKOrN’s intrinsic capability for neuro-symbolic reasoning and combinatorial optimization.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN relate to models in quantum physics and active matter?",
+    "answer": "AKOrN shares principles with models in quantum physics and active matter, as discussed in the appendix.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is the process of synchronization compared to fireflies in the introduction?",
+    "answer": "Because, like fireflies, neurons tend to synchronize their activities with their neighbors, leading to representation compression.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the role of lateral connections in neural interaction?",
+    "answer": "Lateral connections facilitate clustering and competition among neighboring neurons.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN achieve feature binding compared to previous models?",
+    "answer": "By synchronizing oscillatory neurons representing different features, enabling composite representations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the relationship between competitive learning and abstraction in neural networks?",
+    "answer": "Competitive learning compresses information, creating bottlenecks that promote abstraction.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How do traveling waves emerge in the generalized Kuramoto model?",
+    "answer": "They emerge naturally as neighboring oscillators begin to synchronize.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "In what way does AKOrN provide good calibration under perturbations?",
+    "answer": "Its neuronal mechanism leads to robustness and well-calibrated responses to random, adversarial, and natural perturbations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What does the introduction suggest about the limitations of transformers regarding neuro-symbolic reasoning?",
+    "answer": "Transformers lack intrinsic neuro-symbolic reasoning capabilities present in Kuramoto-based models.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s mechanism affect the behavior of neural networks?",
+    "answer": "It drastically changes network behavior by enhancing feature binding, reasoning, and robustness.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the function of the information bottleneck created by competitive learning?",
+    "answer": "It facilitates abstraction by compressing information as it moves through layers.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN generalize the Kuramoto model for neural network use?",
+    "answer": "By applying the Kuramoto differential equation to N-dimensional oscillatory neurons within iterative modules.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is synchronization important for clustering in neural networks?",
+    "answer": "Synchronization aligns oscillators, leading to distributed and continuous clustering of representations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What neuroscientific evidence is cited for the role of traveling waves in memory consolidation?",
+    "answer": "Muller et al. (2016) found circular wave-like patterns in the thalamocortical network during sleep related to memory consolidation.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN incorporate spatiotemporal information compared to traditional neural networks?",
+    "answer": "Through the natural emergence of traveling waves among oscillatory neurons.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the significance of the Kuramoto model’s forces in neural synchronization?",
+    "answer": "The forces encourage connected oscillators to align or anti-align, facilitating synchronization and clustering.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN differ from previous binding models in artificial neural networks?",
+    "answer": "AKOrN uses an N-dimensional Kuramoto generalization for synchronization, enabling richer feature binding.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the relationship between phase variables in Kuramoto models and spin states in Ising models?",
+    "answer": "Phase variables are continuous analogs of the discrete spin states in Ising models.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s approach to object feature binding relate to neuroscience?",
+    "answer": "It mirrors the neuronal binding process where synchronized activity represents composite features.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is it important that AKOrN is grounded in well-understood physics models?",
+    "answer": "It ensures the model’s mechanisms are theoretically sound and interpretable.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What does the introduction suggest about the evolution of artificial neuron design?",
+    "answer": "Designs have shifted from biological inspiration to hardware efficiency, but are now revisiting neuroscience principles.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How do competitive learning and synchronization work together in AKOrN?",
+    "answer": "Competition encourages specialization, while synchronization compresses and binds representations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the role of traveling waves in the generalized Kuramoto model within AKOrN?",
+    "answer": "Traveling waves represent spatiotemporal patterns that may underlie cognitive functions.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s robustness compare to traditional neural network architectures?",
+    "answer": "AKOrN demonstrates increased robustness to various perturbations, surpassing traditional architectures.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is meant by 'distributed and continuous clustering' in the context of Kuramoto synchronization?",
+    "answer": "It refers to the gradual alignment of oscillators, forming clusters in a continuous manner across the network.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s neuronal mechanism relate to uncertainty quantification?",
+    "answer": "Its robustness and physical grounding allow for better quantification of uncertainty in predictions.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the implication of AKOrN’s ability to be combined with standard layer architectures?",
+    "answer": "It can be integrated into existing neural network designs, enhancing their capabilities.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does the abstraction of oscillatory neurons facilitate spatiotemporal representation?",
+    "answer": "By representing neurons as rotating vectors, AKOrN captures dynamic patterns like traveling waves.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What role do lateral connections play in the clustering of neuron activities?",
+    "answer": "They enable neighboring neurons to cluster and synchronize their activities.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s feature binding mechanism compare to previous synchronization-based binding models?",
+    "answer": "AKOrN generalizes synchronization to N dimensions, allowing more complex binding than previous models.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is the information bottleneck created by competitive learning important for abstraction?",
+    "answer": "It reduces redundant information, forcing the network to extract higher-level features.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s approach to reasoning differ from transformer-based architectures?",
+    "answer": "AKOrN inherently supports neuro-symbolic reasoning through its dynamical neuron interactions.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What evidence supports the idea that traveling waves are involved in gating mechanisms in the brain?",
+    "answer": "Davis et al. (2020) suggest that spontaneous traveling waves modulate synaptic activities, acting as gating mechanisms.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does the Kuramoto model encourage specialization among neurons?",
+    "answer": "By synchronizing clusters, it allows different neurons to focus on distinct input aspects.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the advantage of modeling neurons as oscillatory units instead of binary units?",
+    "answer": "Oscillatory units capture dynamic interactions and enable richer representations like spatiotemporal patterns.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN facilitate continuous clustering compared to discrete clustering models?",
+    "answer": "Kuramoto synchronization aligns oscillators in a distributed, continuous manner rather than discrete grouping.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the connection between AKOrN and combinatorial optimization tasks?",
+    "answer": "Kuramoto oscillators can solve such tasks by representing them as continuous dynamical systems.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s mechanism enable solving of Sudoku puzzles?",
+    "answer": "By leveraging continuous reasoning and synchronization akin to neuro-symbolic processing.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is the Kuramoto model chosen as the basis for AKOrN’s neuronal updates?",
+    "answer": "Its well-understood dynamics model synchronization and binding, mirroring brain processes.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What role do traveling waves play in AKOrN’s spatiotemporal representations?",
+    "answer": "They allow the network to model dynamic patterns similar to those observed in the brain.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s robustness to adversarial perturbations arise?",
+    "answer": "From its synchronization-based neuronal mechanism, which stabilizes representations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What does the introduction suggest about the future direction of neural network design?",
+    "answer": "It advocates revisiting neuroscience principles for new design inspirations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s feature binding mechanism contribute to object discovery?",
+    "answer": "By synchronizing feature representations, AKOrN binds object components for effective discovery.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the significance of AKOrN’s compatibility with convolutional and attention layers?",
+    "answer": "It enables the integration of oscillatory neurons into diverse network architectures.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s approach to uncertainty differ from traditional neural networks?",
+    "answer": "It leverages robust synchronization dynamics for more accurate uncertainty quantification.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why might modern deep learning architectures lack features found in AKOrN?",
+    "answer": "They prioritize hardware efficiency over biologically inspired mechanisms like synchronization and binding.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s competitive learning mechanism facilitate specialization among neurons?",
+    "answer": "Competition drives neurons to focus on different input aspects, enhancing specialization.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What evidence is provided for the involvement of traveling waves in long-range brain coordination?",
+    "answer": "Neuroscientific studies cited suggest traveling waves coordinate activities between brain regions.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s neuronal mechanism differ from slot-based models in object discovery?",
+    "answer": "AKOrN uses oscillatory synchronization for binding, while slot-based models rely on discrete slots.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is the Kuramoto model considered well-understood in physics?",
+    "answer": "It has a rich theoretical foundation describing oscillator synchronization dynamics.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s mechanism compare to neuro-symbolic reasoning in traditional models?",
+    "answer": "AKOrN’s dynamics naturally support neuro-symbolic reasoning, unlike traditional architectures.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What does the introduction imply about the importance of abstraction in neural networks?",
+    "answer": "Abstraction is crucial for efficient information processing and is facilitated by competitive learning.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s synchronization mechanism contribute to robustness?",
+    "answer": "Synchronization stabilizes representations, making them less sensitive to perturbations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the relationship between the Kuramoto model and continuous clustering?",
+    "answer": "Kuramoto synchronization aligns oscillators, forming clusters in a continuous fashion.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s approach to feature binding relate to the concept of binding in neuroscience?",
+    "answer": "Both rely on synchronization to combine features into unified representations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the advantage of using N-dimensional unit vectors for neuron abstraction in AKOrN?",
+    "answer": "It allows modeling of complex, multidimensional oscillatory behavior.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s mechanism address the limitations of binary neuron abstractions?",
+    "answer": "It captures richer dynamics and enables spatiotemporal pattern representation.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is competitive learning described as facilitating the process of abstraction?",
+    "answer": "It compresses information, forcing the network to extract and represent higher-level features.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What neuroscientific findings support the role of traveling waves in memory consolidation?",
+    "answer": "Circular wave-like patterns in the thalamocortical network during sleep support this role.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s mechanism compare to traditional clustering methods?",
+    "answer": "It achieves clustering through continuous synchronization rather than discrete assignment.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the relationship between Kuramoto oscillators and kSAT problem-solving?",
+    "answer": "Kuramoto oscillators can solve kSAT problems by mapping them onto continuous dynamical systems.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s integration of spatiotemporal representations differ from other models?",
+    "answer": "It naturally captures traveling waves through oscillator synchronization.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the implication of AKOrN’s grounding in physics models for neural network research?",
+    "answer": "It provides theoretical rigor and interpretability to network design.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s reasoning capability compare to that of transformer architectures?",
+    "answer": "AKOrN inherently supports neuro-symbolic reasoning, which transformers lack.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is binding important for representing composite features in neural networks?",
+    "answer": "It enables the network to represent complex objects by synchronizing feature representations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s use of the Kuramoto differential equation impact neural network dynamics?",
+    "answer": "It introduces synchronization-based updates that change the network’s behavior.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the role of synchronization in the competitive learning process?",
+    "answer": "Synchronization compresses representations, aiding abstraction and specialization.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s approach to feature binding differ from Mozer et al. (1991) and Reichert & Serre (2013)?",
+    "answer": "AKOrN generalizes synchronization to N dimensions, enabling more complex feature binding.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What evidence supports the involvement of traveling waves in short-term memory?",
+    "answer": "Neuroscientific studies suggest traveling waves are linked to short-term memory functions.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s neuronal mechanism contribute to calibration under perturbations?",
+    "answer": "The synchronization dynamics provide stability, resulting in well-calibrated responses.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the significance of AKOrN’s ability to solve combinatorial optimization tasks?",
+    "answer": "It demonstrates the model’s reasoning power and versatility.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s feature binding mechanism relate to distributed clustering?",
+    "answer": "Synchronization binds features by forming distributed clusters of oscillatory neurons.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is the abstraction of neurons as rotating unit vectors important for AKOrN?",
+    "answer": "It enables modeling of dynamic, multidimensional neural interactions.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s neuronal mechanism impact network robustness compared to traditional models?",
+    "answer": "It enhances robustness by stabilizing representations through synchronization.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the advantage of AKOrN’s compatibility with attention mechanisms?",
+    "answer": "It allows the network to leverage oscillatory dynamics for enhanced reasoning capabilities.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s mechanism facilitate specialization among higher-level neurons?",
+    "answer": "Competition through synchronization encourages neurons to focus on different input aspects.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the connection between AKOrN and models in active matter?",
+    "answer": "AKOrN shares dynamical principles with models in active matter, as noted in the appendix.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s approach to clustering differ from discrete clustering in neural networks?",
+    "answer": "It uses continuous synchronization rather than discrete assignment to clusters.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What does the introduction suggest about the role of traveling waves in synaptic activity modulation?",
+    "answer": "Traveling waves act as gating mechanisms by modulating synaptic activities.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s neuronal mechanism contribute to uncertainty quantification?",
+    "answer": "Its robust synchronization dynamics allow for better estimation of uncertainty.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s mechanism enable object discovery with competitive performance?",
+    "answer": "By binding object features through synchronization, AKOrN achieves effective object discovery.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the significance of AKOrN’s ability to be combined with fully connected layers?",
+    "answer": "It allows oscillatory neurons to be used in standard neural network architectures.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s approach to reasoning differ from that of discrete Ising models?",
+    "answer": "AKOrN uses continuous phase variables for reasoning, whereas Ising models use discrete spin states.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the implication of AKOrN’s robust calibration under natural perturbations?",
+    "answer": "It suggests the model is reliable and stable in real-world scenarios.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s neuronal mechanism facilitate distributed clustering?",
+    "answer": "Synchronization aligns oscillators across the network, forming distributed clusters.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is synchronization described as similar to binding in neuroscience?",
+    "answer": "Because it combines features by aligning neuron activities, forming composite representations.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s mechanism address the specialization of neurons?",
+    "answer": "Competition and synchronization encourage neurons to specialize in different input aspects.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What does the introduction suggest about the importance of revisiting neuroscience for neural network design?",
+    "answer": "It may provide new design principles to improve artificial neural networks.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s approach to clustering leverage continuous dynamics?",
+    "answer": "Kuramoto synchronization provides gradual, distributed clustering rather than discrete grouping.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the relationship between AKOrN and quantum physics models?",
+    "answer": "AKOrN shares principles and mechanisms with quantum physics models, as discussed in the appendix.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s mechanism contribute to abstraction in neural networks?",
+    "answer": "Compression via synchronization creates bottlenecks, facilitating abstraction.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the significance of modeling neurons as oscillatory units in AKOrN?",
+    "answer": "It enables dynamic interactions and richer representation of neural activity.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s mechanism compare to traditional integrate-and-fire neuron models?",
+    "answer": "AKOrN abstracts neurons as rotating vectors, capturing oscillatory dynamics beyond binary firing.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is the Kuramoto model relevant for modeling synchronization in neural networks?",
+    "answer": "It provides a well-understood framework for oscillator synchronization, analogous to neural binding.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s mechanism facilitate neuro-symbolic reasoning?",
+    "answer": "By leveraging continuous synchronization dynamics, AKOrN supports symbolic reasoning tasks.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s approach to feature binding differ from slot-based models?",
+    "answer": "It uses oscillatory synchronization rather than discrete slot allocation.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What is the implication of AKOrN’s performance in object discovery tasks?",
+    "answer": "It demonstrates the effectiveness of oscillatory synchronization for feature binding.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "How does AKOrN’s neuronal mechanism enhance reasoning in self-attention?",
+    "answer": "Synchronization allows for more complex feature interactions, improving reasoning.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "What evidence supports the role of traveling waves in cognitive functions?",
+    "answer": "Multiple neuroscientific studies link traveling waves to memory, coordination, and gating.",
+    "paper_id": "paper3"
+  },
+  {
+    "question": "Why is it significant that traveling waves emerge naturally in the generalized Kuramoto model?",
+    "answer": "It enables AKOrN to capture dynamic brain-like spatiotemporal patterns.",
+    "paper_id": "paper3"
+  }
+]

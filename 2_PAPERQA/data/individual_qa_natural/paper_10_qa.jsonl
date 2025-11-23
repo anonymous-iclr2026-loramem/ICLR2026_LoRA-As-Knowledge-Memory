@@ -1,0 +1,40 @@
+{"question": "In the Paper ID 10, What inspired the design of early artificial neural networks?", "answer": "Early artificial neural networks were inspired by biological neurons."}
+{"question": "In the Paper ID 10, What is the McCulloch-Pitts neuron an abstraction of?", "answer": "The McCulloch-Pitts neuron is an abstraction of an integrate-and-fire neuron."}
+{"question": "In the Paper ID 10, How do recent neural network building blocks differ from earlier models?", "answer": "Recent building blocks are designed to work well on modern hardware, rather than strictly following biological inspiration."}
+{"question": "In the Paper ID 10, What improvements in neuroscience have influenced artificial neural network design?", "answer": "Improved understanding of the brain's information processing principles has influenced artificial neural network design."}
+{"question": "In the Paper ID 10, What question arises from recent neuroscience discoveries regarding neural nets?", "answer": "We can ask if there are lessons from neuroscience that can be used as design principles for artificial neural networks."}
+{"question": "In the Paper ID 10, How does the paper describe neurons in a modern dynamical view?", "answer": "Neurons are described as oscillatory units coupled to other neurons."}
+{"question": "In the Paper ID 10, What does the binary state of a McCulloch-Pitts neuron represent?", "answer": "It abstracts the firing of a real neuron."}
+{"question": "In the Paper ID 10, How is an oscillating neuron abstracted in the paper's model?", "answer": "It is abstracted by an N-dimensional unit vector that rotates on the sphere."}
+{"question": "In the Paper ID 10, What new neural network architecture is introduced in the paper?", "answer": "An architecture with iterative modules that update N-dimensional oscillatory neurons via a generalization of the Kuramoto model."}
+{"question": "In the Paper ID 10, What is the Kuramoto model?", "answer": "The Kuramoto model describes the synchronization of oscillators."}
+{"question": "In the Paper ID 10, How do Kuramoto updates affect connected oscillators?", "answer": "They apply forces encouraging the oscillators to become aligned or anti-aligned."}
+{"question": "In the Paper ID 10, What neuroscience process is Kuramoto synchronization similar to?", "answer": "It is similar to binding in neuroscience."}
+{"question": "In the Paper ID 10, How can the Kuramoto synchronization process be interpreted?", "answer": "It can be understood as distributed and continuous clustering."}
+{"question": "In the Paper ID 10, What effect does synchronization have on network representations?", "answer": "It tends to compress representations via synchronization."}
+{"question": "In the Paper ID 10, How is the Kuramoto model incorporated into artificial neural networks?", "answer": "By applying the differential equation describing the Kuramoto model to each individual neuron."}
+{"question": "In the Paper ID 10, What are artificial Kuramoto oscillatory neurons (AKOrN)?", "answer": "AKOrN are neurons in artificial neural networks that use the Kuramoto model for their dynamics."}
+{"question": "In the Paper ID 10, With what layer architectures can AKOrN be combined?", "answer": "AKOrN can be combined with fully connected layers, convolutions, and attention mechanisms."}
+{"question": "In the Paper ID 10, What is one capability explored with AKOrN in the paper?", "answer": "AKOrN strongly binds object features."}
+{"question": "In the Paper ID 10, How does AKOrN's object feature binding performance compare to slot-based models?", "answer": "AKOrN achieves competitive performance to slot-based models in object discovery."}
+{"question": "In the Paper ID 10, What effect does AKOrN have on self-attention?", "answer": "It enhances the reasoning capability of self-attention."}
+{"question": "In the Paper ID 10, How does AKOrN affect robustness of neural networks?", "answer": "AKOrN increases robustness against random, adversarial, and natural perturbations."}
+{"question": "In the Paper ID 10, How is the calibration of AKOrN described?", "answer": "AKOrN shows surprisingly good calibration."}
+{"question": "In the Paper ID 10, Who originally designed the McCulloch-Pitts neuron?", "answer": "McCulloch and Pitts designed the neuron in 1943."}
+{"question": "In the Paper ID 10, What year did Sherrington describe the integrate-and-fire neuron?", "answer": "Sherrington described it in 1906."}
+{"question": "In the Paper ID 10, Who discusses modern hardware-driven neural network designs?", "answer": "Hooker discusses this in 2021."}
+{"question": "In the Paper ID 10, Who presents the modern dynamical view of neurons as oscillatory units?", "answer": "Muller et al. present this view in 2018."}
+{"question": "In the Paper ID 10, How is the N-dimensional oscillatory neuron model mathematically represented?", "answer": "By an N-dimensional unit vector rotating on a sphere."}
+{"question": "In the Paper ID 10, Who generalized the oscillatory neuron model with unit vectors?", "answer": "Löwe et al. did this in 2023."}
+{"question": "In the Paper ID 10, Who introduced the Kuramoto model?", "answer": "Kuramoto introduced the model in 1984."}
+{"question": "In the Paper ID 10, What is the main function of the Kuramoto model in neural networks?", "answer": "It enables synchronization of oscillatory neurons."}
+{"question": "In the Paper ID 10, What does synchronization via the Kuramoto model lead to in neural nets?", "answer": "It leads to compression of representations."}
+{"question": "In the Paper ID 10, What is binding in neuroscience analogous to in the Kuramoto model?", "answer": "Binding is analogous to synchronization and clustering in the Kuramoto model."}
+{"question": "In the Paper ID 10, How does the paper update oscillatory neurons in its architecture?", "answer": "Through iterative modules using the Kuramoto model."}
+{"question": "In the Paper ID 10, Why are oscillatory neurons considered a modern abstraction?", "answer": "Because they model neurons as dynamical, coupled oscillators rather than just binary units."}
+{"question": "In the Paper ID 10, What types of neural network layers can leverage AKOrN?", "answer": "Fully connected layers, convolutional layers, and attention mechanisms."}
+{"question": "In the Paper ID 10, What impact does AKOrN have on object discovery tasks?", "answer": "AKOrN provides strong binding of object features, performing competitively with slot-based models."}
+{"question": "In the Paper ID 10, What is the effect of AKOrN on network reasoning capabilities?", "answer": "AKOrN enhances reasoning capabilities, particularly in self-attention mechanisms."}
+{"question": "In the Paper ID 10, How does AKOrN improve network robustness?", "answer": "AKOrN increases robustness against random, adversarial, and natural perturbations."}
+{"question": "In the Paper ID 10, What is unique about AKOrN's calibration?", "answer": "AKOrN exhibits surprisingly good calibration."}
+{"question": "In the Paper ID 10, What does the paper suggest about the future of neural network design?", "answer": "That lessons from neuroscience, such as oscillatory neuron dynamics, can inform new neural network architectures."}

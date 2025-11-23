@@ -1,0 +1,69 @@
+You are an expert academic assistant tasked with creating a high-quality question-answering dataset from a research paper's introduction. Your goal is to generate 30 question-and-answer pairs based exclusively on the provided text.
+
+Instructions and Rules:
+Source Grounding: All questions and answers MUST be derived solely from the provided introduction text. Do not use any external knowledge or make assumptions beyond what is written.
+
+Question Hierarchy: You must create questions across three distinct levels of understanding, as defined below.
+
+Quantity: Generate exactly 30 pairs in total: 10 for Level 1, 10 for Level 2, and 10 for Level 3.
+
+Output Format: The output must be a single, valid JSON array of objects. Do not include any explanatory text, comments, or markdown formatting before or after the JSON code block.
+
+Question Level Definitions:
+Level 1: Key Information Recall (10 Questions)
+
+Objective: To test the recall of specific, explicitly stated facts, proper nouns, terminology, and figures from the text.
+
+Question Type: "What is...?", "What are the names of...?", "Which X was mentioned...?"
+
+Level 2: Contextual Comprehension (10 Questions)
+
+Objective: To test the understanding of relationships between concepts, such as cause-and-effect, problem-solution, comparisons, and the function of a component.
+
+Question Type: "Why does...?", "What is the effect of A on B?", "How does X work?", "What is the difference between A and B?"
+
+Level 3: Logical Structure Inference (10 Questions)
+
+Objective: To test the understanding of the overall logical flow of the text, including identifying the core problem, the research gap, the proposed solution, and the main contribution.
+
+Question Type: "What is the core problem the authors aim to solve?", "What research gap does this paper intend to fill?", "What is the main advantage of the proposed method?", "Summarize the key contribution of this work in relation to prior limitations."
+
+Desired JSON Output Format:
+The final output MUST be a JSON array containing 30 objects. Each object must have three keys: level (integer: 1, 2, or 3), question (string), and answer (string).
+
+Example:
+
+[
+  {
+    "level": 1,
+    "question": "What is the full name of the algorithm the authors integrate their estimator into?",
+    "answer": "The authors integrated their estimator into the Generalized Successive Elimination algorithm."
+  },
+  {
+    "level": 2,
+    "question": "According to the text, what is the inverse relationship between response time and preference strength?",
+    "answer": "The text states that users who strongly prefer to skip a product tend to do so quickly, while longer response times can indicate weaker preferences."
+  },
+  {
+    "level": 3,
+    "question": "What is the core reason complex psychological models are impractical for real-time systems, and how does this paper's proposal address it?",
+    "answer": "They are impractical because they rely on computationally intensive methods like hierarchical Bayesian inference and MLE. This paper addresses it by proposing a computationally efficient method that frames utility estimation as a linear regression problem."
+  }
+]
+
+Introduction Text to Analyze:
+Title: Enhancing Preference-based Linear Bandits via Human Response Time
+
+Interactive preference learning from human binary choices is widely used in recommender systems [32, 56, 9, 21], assistive robots [54, 65], and fine-tuning large language models [59, 43, 46, 47, 5]. This process is often framed as a preference-based bandit problem [7, 31], where the system repeatedly presents queries as pairs of options, the human selects a preferred option, and the system infers preferences from these choices. Binary choices are popular because they are easy to implement and impose low cognitive load on users [74, 72, 37]. However, while binary choices reveal preferences, they provide little information about preference strength [77]. To address this, researchers have incorporated additional explicit human feedback, such as ratings [58, 50], labels [74], and slider bars [72, 5], but these approaches often complicate interfaces and increase cognitive demands [36, 37].
+
+In this paper, we propose leveraging implicit human feedback, specifically response times, to provide additional insights into preference strength. Unlike explicit feedback, response time is unobtrusive and effortless to measure [17], offering valuable information that complements binary choices [16, 2]. For instance, consider an online retailer that repeatedly presents users with a binary query, whether to purchase or skip a recommended product [35]. Since most users skip products most of the time [33], the probability of skipping becomes nearly 1 for most items. This lack of variation in choices makes it difficult to assess how much a user likes or dislikes any specific product, limiting the system’s ability to accurately infer their preferences. Response time can help overcome this limitation. Psychological research shows an inverse relationship between response time and preference strength [17]: users who strongly prefer to skip a product tend to do so quickly, while longer response times can indicate weaker preferences. Thus, even when choices appear similar, response time can uncover subtle differences in preference strength, helping to accelerate preference learning.
+
+Leveraging response times for preference learning presents notable challenges. Psychological research has extensively studied the relationship between human choices and response times [17, 19] using complex models like Drift-Diffusion Models [51] and Race Models [66, 12]. While these models align with both behavioral and neurobiological evidence [70], they rely on computationally intensive methods, such as hierarchical Bayesian inference [71] and maximum likelihood estimation (MLE) [52], to estimate the underlying human utility functions from both human choices and response times, making them impractical for real-time interactive systems. Although faster estimators exist [67, 68, 30, 28, 8], they typically estimate the utility functions for a single pair of options without aggregating data across multiple pairs. This limits their ability to leverage structures like linear utility functions, which are widely adopted both in preference learning with large option spaces [41, 54, 24, 56, 21] and in cognitive models for human multi-attribute decision-making [64, 26, 76].
+
+To address these challenges, we propose a computationally efficient method for estimating linear human utility functions from both choices and response times, grounded in the difference-based EZ diffusion model [67, 8]. Our method leverages response times to transform binary choices into richer continuous signals, framing utility estimation as a linear regression problem that aggregates data across multiple pairs of options. We compare our estimator to traditional logistic regression methods that rely solely on choices [3, 31]. For queries with strong preferences, our theoretical and empirical analyses show that response times complement choices by providing additional information about preference strength. This significantly improves utility estimation compared to using choices alone. For queries with weak preferences, response times add little value but do not degrade performance. In summary, response times complement choices, particularly for queries with strong preferences.
+
+Our linear-regression-based estimator integrates seamlessly into algorithms for preference-based bandits with linear human utility functions [3, 31], enabling interactive learning systems to leverage response times for faster learning. We specifically integrated our estimator into the Generalized Successive Elimination algorithm [3] for fixed-budget best-arm identification [29, 34]. Simulations using three real-world datasets [57, 16, 39] consistently show that incorporating response times significantly reduces identification errors, compared to traditional methods that rely solely on choices. To the best of our knowledge, this is the first work to integrate response times into bandits (and RL).
+
+Section 2 introduces the preference-based linear bandit problem and the difference-based EZ diffusion model. Section 3 presents our utility estimator, incorporating both choices and response times, and offers a theoretical comparison to the choice-only estimator. Section 4 integrates both estimators into the Generalized Successive Elimination algorithm. Section 5 presents empirical results for estimation and bandit learning. Section 6 discusses the limitations of our approach. Appendix B reviews response time models, parameter estimation techniques, and their connection to preference-based RL.
+
+Now, generate the 30 Q&A pairs in the specified JSON format based on the text provided above.

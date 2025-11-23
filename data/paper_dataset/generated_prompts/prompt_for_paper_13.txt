@@ -1,0 +1,73 @@
+You are an expert academic assistant tasked with creating a high-quality question-answering dataset from a research paper's introduction. Your goal is to generate 30 question-and-answer pairs based exclusively on the provided text.
+
+Instructions and Rules:
+Source Grounding: All questions and answers MUST be derived solely from the provided introduction text. Do not use any external knowledge or make assumptions beyond what is written.
+
+Question Hierarchy: You must create questions across three distinct levels of understanding, as defined below.
+
+Quantity: Generate exactly 30 pairs in total: 10 for Level 1, 10 for Level 2, and 10 for Level 3.
+
+Output Format: The output must be a single, valid JSON array of objects. Do not include any explanatory text, comments, or markdown formatting before or after the JSON code block.
+
+Question Level Definitions:
+Level 1: Key Information Recall (10 Questions)
+
+Objective: To test the recall of specific, explicitly stated facts, proper nouns, terminology, and figures from the text.
+
+Question Type: "What is...?", "What are the names of...?", "Which X was mentioned...?"
+
+Level 2: Contextual Comprehension (10 Questions)
+
+Objective: To test the understanding of relationships between concepts, such as cause-and-effect, problem-solution, comparisons, and the function of a component.
+
+Question Type: "Why does...?", "What is the effect of A on B?", "How does X work?", "What is the difference between A and B?"
+
+Level 3: Logical Structure Inference (10 Questions)
+
+Objective: To test the understanding of the overall logical flow of the text, including identifying the core problem, the research gap, the proposed solution, and the main contribution.
+
+Question Type: "What is the core problem the authors aim to solve?", "What research gap does this paper intend to fill?", "What is the main advantage of the proposed method?", "Summarize the key contribution of this work in relation to prior limitations."
+
+Desired JSON Output Format:
+The final output MUST be a JSON array containing 30 objects. Each object must have three keys: level (integer: 1, 2, or 3), question (string), and answer (string).
+
+Example:
+
+[
+  {
+    "level": 1,
+    "question": "What is the full name of the algorithm the authors integrate their estimator into?",
+    "answer": "The authors integrated their estimator into the Generalized Successive Elimination algorithm."
+  },
+  {
+    "level": 2,
+    "question": "According to the text, what is the inverse relationship between response time and preference strength?",
+    "answer": "The text states that users who strongly prefer to skip a product tend to do so quickly, while longer response times can indicate weaker preferences."
+  },
+  {
+    "level": 3,
+    "question": "What is the core reason complex psychological models are impractical for real-time systems, and how does this paper's proposal address it?",
+    "answer": "They are impractical because they rely on computationally intensive methods like hierarchical Bayesian inference and MLE. This paper addresses it by proposing a computationally efficient method that frames utility estimation as a linear regression problem."
+  }
+]
+
+Introduction Text to Analyze:
+Title: Programming Refusal with Conditional Activation Steering
+
+A striking feature of large language models (LLMs) is their ability to process high-level concepts through rich representations in their activations. This feature has given rise to techniques like activation steering (Turner et al., 2023), which leverage these learned representations to efficiently and predictably alter LLM behavior (Wang et al., 2024b; Zou et al., 2023; Rimsky et al., 2024).
+
+Problem: Lack of conditional control in activation steering. Activation steering offers a promising alternative to optimization-based techniques by directly manipulating the model’s native representations, often requiring only a simple activation addition step during each forward call (Turner et al., 2023). While activation steering has shown promise in altering LLM behavior, such as removing or inducing refusal behavior, a key limitation of current methods is the inability to condition when and what to refuse (Zheng et al., 2024; Ghandeharioun et al., 2024). That is, adding a “refusal vector” using existing activation steering methods increases refusal rates indiscriminately across all inputs, limiting the model’s utility (Arditi et al., 2024).
+
+Contribution: Adding “control” to activation steering. We introduce Conditional Activation Steering (CAST), a method that enables fine-grained, context-dependent control over LLM behaviors. We introduce a new type of steering vector in the activation steering formulation, the condition vector, representing certain activation patterns induced by the prompt during the inference process. A simple similarity calculation between this condition vector and the model’s activation at inference time effectively serves as a switch, determining whether to apply the refusal vector. This approach allows for selective refusal of harmful prompts while maintaining the ability to respond to harmless ones, as depicted in Figure 1. A breakdown of this figure is presented in Table 3. Furthermore, CAST maintains the data, runtime, and compute efficiency of activation steering (Figure 6) while adding controllability, enabling the implementation of behavioral rules in LLMs without significant costs.
+
+Application: Selecting what to refuse.   Many alignment goals concern contextually refusing specific classes of instructions (Anwar et al., 2024). Traditional methods like preference modeling are resource-intensive and struggle with subjective, black-box rewards (Feng et al., 2024; Pitis, 2023; Rafailov et al., 2024; Stiennon et al., 2020; Hayum et al.,). Additionally, the definition of harmful content varies across contexts (He et al., 2024b; Sorensen et al., 2024; Santurkar et al., 2023), complicating the creation of universal harm models. The usage context further complicates this variability; for instance, discussing medical advice might be harmful in some situations (Wang et al., 2023b) but essential in others, such as in medical chatbots (Xie et al., 2024a). In this paper, we show CAST can implement behavioral rules like “if input is about hate speech or adult content, then refuse” (Figure 8a) or “if input is not about legal advice, then refuse” (Figure 9a), allowing for selective modification of responses to specific content without weight optimization.
+
+On a technical level, our primary insight is that different prompts consistently activate distinct patterns in the model’s hidden states during inference (Hu et al., 2024). These patterns can be extracted as a steering vector and used as reference points for detecting specific prompt categories or contexts. This observation allows us to use steering vectors not only as behavior modification mechanisms but also as condition indicators, which we term “condition vectors.” Our specific contributions are as follows:
+
+1) Framework: We introduce conditional activation steering and condition vectors, which adds a new dimension of controllability to existing methods.
+
+2) Application: We demonstrate the logical composition of condition vectors to create custom refusal conditions. This is a key step towards tailoring model behavior to specific needs.
+
+3) Codebase: We release a general-purpose activation steering toolkit with demo datasets for the broader activation engineering community <placeholder: open-source GitHub link>.
+
+Now, generate the 30 Q&A pairs in the specified JSON format based on the text provided above.
